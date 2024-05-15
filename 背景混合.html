@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>背景混合</title>
+    <style>
+      .mix {
+        width: 330px;
+        height: 330px;
+        background: url('blend.webp'), #0ff;
+        background-blend-mode: lighten;
+      }
+      .mix::after {
+        content: "";
+        position: absolute;
+        margin-left: 10px;
+        width: 330px;
+        height: 330px;
+        background: url('blend.webp'), #f00;
+        background-blend-mode: lighten;/* 混合模式 */
+        mix-blend-mode: darken; /* 设置图片元素与父容器背景如何进行混合 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mix"></div>
+  </body>
+</html>

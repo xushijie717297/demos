@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="transform_container">
+      <div class="container">
+        <div class="one">一一一一</div>
+        <div class="two">二二二二</div>
+        <div class="three">三三三三三</div>
+      </div>
+    </div>
+    <style scoped lang="scss">
+      .transform_container {
+        perspective: 1px;
+        transform-style: preserve-3d;
+        height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+      .container {
+        transform-style: preserve-3d;
+        height: 150%;
+        .one {
+          font-weight: 600;
+          transform: translateZ(-1px);
+          position: absolute;
+          top: 20%;
+          left: 20%;
+        }
+        .two {
+          font-weight: 600;
+          transform: translateZ(-2px);
+          position: absolute;
+          top: 20%;
+          left: 35%;
+        }
+        .three {
+          font-weight: 600;
+          transform: translateZ(-3px);
+          position: absolute;
+          top: 20%;
+          left: 50%;
+        }
+      }
+    </style>
+  </body>
+</html>

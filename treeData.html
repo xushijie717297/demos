@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-plus/dist/index.css">
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-plus"></script>
+    <title>Element Plus demo</title>
+  </head>
+  <body>
+    <div id="app">
+      <el-button>{{ message }}</el-button>
+      
+    </div>
+    <script>
+      const App = {
+        data() {
+          return {
+            message: "Hello Element Plus",
+            treeData:[
+              {
+                label:"A",
+                Id:"1",
+                PId:"0",
+                child:[
+                  {label:"A1",Id:"11",PId:"1"},
+                  {label:"A2",Id:"12",PId:"1"},
+                  {label:"A3",Id:"13",PId:"1"},
+                ]
+              },
+                            {
+                  label:"B",
+                Id:"2",
+                PId:"0",
+                child:[
+                  {label:"B1",Id:"21",PId:"2"},
+                  {label:"B2",Id:"22",PId:"2"},
+                  {label:"B3",Id:"23",PId:"2",child:[
+                    {label:"B21",Id:"231",PId:"23"}
+                  ]},
+                ]
+              }
+            ]
+          };
+        },
+        
+      };
+      const app = Vue.createApp(App);
+      app.use(ElementPlus);
+      app.mount("#app");
+    </script>
+  </body>
+</html>

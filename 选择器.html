@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>选择器</title>
+    <style>
+      /* 一般写法 */
+      .section h1,
+      .section h2,
+      .section h3,
+      .articel h1,
+      .articel h2,
+      .articel h3,
+      .aside h1,
+      .aside h2,
+      .aside h3 {
+        color: red;
+      }
+      /* is写法 */
+      :is(.section, .articel, .aside, :thf(1)) :is(h1, h2, h3) {
+        color: blue;
+      }
+      /* 错误写法 */
+      .section h1,
+      .section h2,
+      .section h3,
+      .articel h1,
+      .articel h2,
+      .articel h3,
+      .aside h1,
+      .aside h2,
+      .aside h3,
+      :thf(1) {
+        color: yellow;
+      }
+      label {
+        display: block;
+        margin: 1px;
+        padding: 1px;
+      }
+
+      .field {
+        margin: 1px;
+        padding: 1px;
+      }
+
+      input:invalid {
+        background-color: #ffdddd;
+      }
+
+      form:invalid {
+        border: 5px solid #ffdddd;
+      }
+
+      input:valid {
+        background-color: #ddffdd;
+      }
+
+      form:valid {
+        border: 5px solid #ddffdd;
+      }
+
+      input:required {
+        border-color: #800000;
+        border-width: 3px;
+      }
+
+      input:required:invalid {
+        border-color: #c00000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="section">
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+      </div>
+      <div class="articel">
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+      </div>
+      <div class="aside">
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+      </div>
+      <form>
+        <div class="field">
+          <label for="url_input">输入一个 URL：</label>
+          <input type="url" id="url_input" />
+        </div>
+
+        <div class="field">
+          <label for="email_input">输入一个电子邮件地址：</label>
+          <input type="email" id="email_input" required />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

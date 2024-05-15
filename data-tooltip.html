@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data-tooltip</title>
+    <style>
+        div{
+            line-height: 30px;
+            font-size: 16px;
+        }
+        [data-tooltip] {
+            position: relative;
+            cursor: pointer;
+        }
+
+        [data-tooltip]:hover::before {
+            padding: 2.5px;
+            border-radius: 5px;
+            background-color: gray;
+            color: white;
+            content: attr(data-tooltip);
+            /* 以下是定位相关的属性声明 */
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+   <div data-tooltip="我是data-tooltip">柳暗花明又一村</div> 
+   <div>柳暗花明又一村</div> 
+   <div data-tooltip="我是data-tooltip"></div> 
+   <div>柳暗花明又一村</div> 
+</body>
+</html>

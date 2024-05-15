@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>角向渐变</title>
+    <style>
+      div {
+        margin: auto;
+        width: 500px;
+        height: 500px;
+        /* 
+            from angle:可选。起始角度。默认值为 0deg
+            at position:可选。中心位置。默认居中。
+            color degree:角渐变断点。该值包含一个颜色值，后跟一个可选的停止位置（ 0 到 360 之间的度数或 0% 到 100% 之间的百分比）。
+        */
+        background: conic-gradient(
+            from 270deg at 20px 5px,
+            #31c2ec 90deg,
+            transparent 0deg
+          ),
+          conic-gradient(
+            from 270deg at 5px 20px,
+            #31c2ec 90deg,
+            transparent 0deg
+          ),
+        /*  
+            第一个参数角度方向 0deg-360deg 默认180deg
+            第二个参数指定线性渐变起始位置第一个关键字为水平位置（left||right）第二个为垂直（top||bottom）顺序不固定 都为可选项
+            第三个参数指定渐变的起止颜色，由颜色值、停止位置（可选，使用百分比指定）组成。
+        
+        */
+            repeating-linear-gradient(
+              90deg,
+              #aec8ee 0,
+              #aec8ee 1px,
+              transparent 1px,
+              transparent 100px
+            ),
+          repeating-linear-gradient(
+            #aec8ee 0,
+            #aec8ee 1px,
+            transparent 1px,
+            transparent 100px
+          ),
+          #0e284d;
+        background-repeat: repeat, repeat, no-repeat, no-repeat;
+        background-size: 100px 100px, 100px 100px, 100% 100%, 100% 100%;
+        background-position: -10px -2.5px, -2.5px -10px, 0 0, 0 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "-1",
+    "name": "源头",
+    "type": "source",
+    "x": 5500,
+    "y": 200,
+    "pid": "-3",
+    "show": false
+  },
+  {
+    "id": "-2",
+    "name": "关联分析",
+    "type": "related",
+    "alias": "related",
+    "x": 5500,
+    "y": 200,
+    "pid": "-3",
+    "show": false
+  },
+  {
+    "id": "1",
+    "name": "事件",
+    "type": "event",
+    "alias": "filter_1",
+    "x": 5700,
+    "y": 200,
+    "pid": "-1",
+    "show": true
+  },
+  {
+    "id": "019b9900-3a3b-11ee-8af0-4f44fbf8f0b6",
+    "alias": "filter_1",
+    "name": "事件接收时间2023-08-11 00:00:00-2023-08-14 00:00:00之间",
+    "type": "condition",
+    "pid": "1",
+    "y": 200,
+    "x": 5900,
+    "show": true,
+    "value": "",
+    "value1": "2023-08-11 00:00:00",
+    "value2": "2023-08-14 00:00:00",
+    "valueArray": [],
+    "key": "lrecepttime",
+    "symbol": "Between"
+  }
+]

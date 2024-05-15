@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>毛玻璃</title>
+    <style>
+      .ban2 {
+        position: absolute;
+        top: 107px;
+        right: 139px;
+        z-index: 17;
+        border: 1px solid transparent;
+        -webkit-clip-path: url(#banGlass);
+        clip-path: url(#banGlass);
+        backdrop-filter: saturate(180%) blur(2px);
+        background: linear-gradient(
+          45deg,
+          rgba(64, 140, 253, 0.12),
+          rgba(146, 202, 255, 0.12)
+        );
+        animation: banImgAnim 2.5s infinite alternate linear;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ban2">
+      <svg width="100%" height="100%" viewBox="0 0 228.64 220.15">
+        <use xlink:href="#glassImg" />
+      </svg>
+    </div>
+    <!-- //svg绘制 -->
+    <svg width="100%" height="100%" viewBox="0 0 228.64 220.15">
+      <defs id="glassImg">
+        <clipPath id="banGlass">
+          <linearGradient
+            id="路径_10_"
+            gradientUnits="userSpaceOnUse"
+            x1="-847.1108"
+            y1="651.968"
+            x2="-847.1904"
+            y2="651.165"
+            gradientTransform="matrix(228.6432 0 0 -220.15 193813.2344 143552.0938)"
+          >
+            <stop offset="0" style="stop-color: #92caff" />
+            <stop offset="1" style="stop-color: #408cfd" />
+          </linearGradient>
+
+          <polygon
+            id="路径_1_"
+            class="st5"
+            points="84,0 198.4,44.8 232.3,154.9 152,220.1 37.6,175.3 3.7,65.3 "
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  </body>
+</html>

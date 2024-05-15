@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/dspjs@latest/dist/dsp.min.js"></script>
+</head>
+<body>
+    <img src="./blend.webp" id="sourceImage" alt="" srcset="">
+    <canvas id="canvas" width="200" height="200"></canvas>
+
+    <script>
+        // 加载图片
+        let imgElement = document.getElementById('sourceImage');
+        let canvas = document.createElement('canvas');
+        let ctx = canvas.getContext('2d');
+
+        // 设置canvas尺寸与图片相同
+        canvas.width = imgElement.naturalWidth;
+        canvas.height = imgElement.naturalHeight;
+
+        // 将图片绘制到canvas上
+        ctx.drawImage(imgElement, 0, 0, canvas.width, canvas.height);
+
+        // 获取图像像素数据
+        let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        let pixelData = imageData.data;
+
+        // 创建一个FFT实例
+        let fft = new dsp.FFT(pixelData.length);
+ 
+        // 执行快速傅里叶变换
+        let spectrum = fft.forward(pixelData);
+
+        // 添加水印（此处仅为示例，实际应用中需要对频谱进行适当处理）
+        // 假设我们有一个简单的二进制水印字符串
+        let watermark = 'hello';
+        let watermarkArray = Array.from(watermark).map(char => char.charCodeAt(0));
+
+        // 将水印信息嵌入频谱的低频部分
+        for (let i = 0; i < Math.min(watermarkArray.length, spectrum.length / 2); i++) {
+            // 控制嵌入强度，这里只是简单相加，实际应用中可能需要更复杂的方法
+            spectrum[i] += watermarkArray[i % watermarkArray.length] * 0.1;
+        }
+
+        // 执行逆傅里叶变换
+        let watermarkedPixels = fft.inverse(spectrum);
+
+        // 更新canvas上的图像数据
+        imageData.data.set(watermarkedPixels);
+        ctx.putImageData(imageData, 0, 0);
+
+        // 显示含有水印的canvas
+        document.body.appendChild(canvas);
+    </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>多边形</title>
+    <!-- 用裁切属性实现 -->
+    <!--<style>
+      .btn-wrap {
+   
+    filter: drop-shadow(2px 4px 4px rgba(50, 50, 0, 0.39))
+    drop-shadow(-1px -1px 0px rgba(242, 4, 4, 0.5));
+}
+.menu-cell {
+    text-align: center;
+    background: #ffffff;
+    z-index: 1;
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    height: 17.5vw;
+    /* line-height: 175px; */
+    width: 15vw;
+    margin: 6px;
+    overflow: hidden; 
+}
+    </style>
+  </head>
+
+  <body>
+    <div class="flex justify-start gap-x-3 ">
+    <div class="btn-wrap">
+   
+      <div class="menu-cell">
+      </div>
+    </div>
+    <div class="btn-wrap">
+      
+      <div class="menu-cell">
+      </div>
+    
+    </div>
+    <div class="btn-wrap">
+    
+      <div class="menu-cell">
+      </div>
+    
+    </div>
+  </body> -->
+
+
+
+  <!-- 伪元素实现 -->
+  <!-- <style>
+    .hexagon {           
+         width: 104px;            
+         height: 60px;            
+         position: relative;            
+         margin: 10px 40px;                  
+      }        
+      .hexagon__item {            
+          width: 100%;            
+          height: 100%;            
+          background: blue;            
+          position: absolute;            
+          top: 30px;            
+          left: 0;            
+          visibility: hidden;            
+          overflow: hidden;        
+      }        
+      .hexagon__item_left {            
+          transform: rotate(-60deg);        
+      }        
+      .hexagon__item_right {            
+          transform: rotate(60deg);        
+      }        
+      .hexagon__item:before {            
+          position: absolute;            
+          top: 0;            
+          left: 0;            
+          content: "";            
+          height: 130px;            
+          width: 100%;            
+          visibility: visible;            
+     
+          background-color: #d9d32a;
+                       background-size: cover;            
+          transform-origin: 0 0;        
+      }        
+      .hexagon__item_left:before {            
+          transform: rotate(60deg) 
+           translateY(-70%);         
+      }        
+      .hexagon__item_right:before {            
+          transform: rotate(-60deg) 
+          translateX(-50%);        
+      }        
+      .hexagon__item_center:before {            
+          transform: translateY(-25%);        
+      }    
+  </style>
+</head>
+
+<body>
+  <div class="flex">
+  <div class="hexagon">
+    <div class="hexagon__item hexagon__item_left"></div>
+    <div class="hexagon__item hexagon__item_center"></div>
+    <div class="hexagon__item hexagon__item_right"></div>
+  </div>
+  <div class="hexagon">
+      <div class="hexagon__item hexagon__item_left"></div>
+      <div class="hexagon__item hexagon__item_center"></div>
+      <div class="hexagon__item hexagon__item_right"></div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagon__item hexagon__item_left"></div>
+      <div class="hexagon__item hexagon__item_center"></div>
+      <div class="hexagon__item hexagon__item_right"></div>
+    </div>
+    <div class="hexagon">
+      <div class="hexagon__item hexagon__item_left"></div>
+      <div class="hexagon__item hexagon__item_center"></div>
+      <div class="hexagon__item hexagon__item_right"></div>
+    </div>
+  </div>
+</body> -->
+
+<!-- border模拟 -->
+<style>
+    body {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 100px);
+      grid-gap: 5px;
+      justify-content: center;
+      padding: 50px;
+      background-color: #f0f0f0;
+    }
+
+    .hexagon {
+      position: relative;
+      width: 100px;
+      height: 57.74px;
+      background-color: #ffd700;
+      margin-bottom: -2px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 添加阴影效果 */
+    }
+
+    .hexagon::before,
+    .hexagon::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+    }
+
+    .hexagon::before {
+      top: -27.87px;
+      border-bottom: 28.87px solid #ffd700;
+    }
+
+    .hexagon::after {
+      bottom: -27.87px;
+      border-top: 28.87px solid #ffd700;
+    }
+  </style>
+  <title>Honeycomb Effect with Shadow</title>
+</head>
+<body>
+    <div class="hexagon" style="position: relative;">
+   
+      </div>
+      <div class="hexagon" style="position: relative;">
+   
+      </div>
+  <!-- 添加更多蜂巢元素... -->
+  <iframe src="http://192.168.101.30:9000/oad/imagebucket/新建 DOC 文档-20240410145511772.doc"></iframe>
+</body>
+</html>

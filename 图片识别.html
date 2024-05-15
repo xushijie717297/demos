@@ -1,0 +1,136 @@
+<!--
+    * @func 文件上传和对象检测功能
+    * @desc 实现了图片上传功能，并利用Transformer模型进行对象检测，并在图片上标记检测到的对象
+    * @author [Your Name]
+    * @data 2024-04-17
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nlp之图片识别，两种语言</title>
+  <!-- CSS 样式 -->
+  <style>
+    .container {
+      margin: 40px auto;
+      width: max(50vw, 400px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .custom-file-upload {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 10px;
+      border: 2px solid black;
+      padding: 8px 16px;
+      border-radius: 6px;
+    }
+
+    #file-upload {
+      display: none;
+    }
+
+    #image-container {
+      width: 100%;
+      margin-top: 20px;
+      position: relative;
+    }
+
+    #image-container>img {
+      width: 100%;
+    }
+
+    .bounding-box {
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    .bounding-box-label {
+      position: absolute;
+      color: white;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 页面主体内容 -->
+  <main class="container">
+    <label for="file-upload" class="custom-file-upload">
+      <input type="file" accept="image/*" id="file-upload">
+      上传图片
+    </label>
+    <div id="image-container"></div>
+    <p id="status"></p>
+  </main>
+
+  <!-- JavaScript 代码 -->
+  <script type="module">
+    // 导入transformers nlp任务的pipeline和env对象
+    import { pipeline, env } from "https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.1"
+    // 允许本地模型
+    env.allowLocalModels = false;
+
+    // 获取文件上传和图片容器元素
+    const fileUpload = document.getElementById('file-upload');
+    const imageContainer = document.getElementById('image-container')
+
+    // 监听文件上传事件
+    fileUpload.addEventListener('change', function (e) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onload = function (e2) {
+        const image = document.createElement('img');
+        image.src = e2.target.result;
+        imageContainer.appendChild(image)
+        detect(image)
+      }
+      reader.readAsDataURL(file)
+    })
+
+    // 获取状态信息元素
+    const status = document.getElementById('status');
+
+    // 检测图片的AI任务
+    const detect = async (image) => {
+      status.textContent = "分析中..."
+      const detector = await pipeline("object-detection", "Xenova/detr-resnet-50")
+      const output = await detector(image.src, {
+        threshold: 0.1,
+        percentage: true
+      })
+      output.forEach(renderBox)
+    }
+
+    // 渲染检测框函数
+    function renderBox({ box, label }) {
+      const { xmax, xmin, ymax, ymin } = box
+      const boxElement = document.createElement("div");
+      boxElement.className = "bounding-box"
+      Object.assign(boxElement.style, {
+        borderColor: '#123123',
+        borderWidth: '1px',
+        borderStyle: 'solid',
+        left: 100 * xmin + '%',
+        top: 100 * ymin + '%',
+        width: 100 * (xmax - xmin) + "%",
+        height: 100 * (ymax - ymin) + "%"
+      })
+
+      const labelElement = document.createElement('span');
+      labelElement.textContent = label;
+      labelElement.className = "bounding-box-label"
+      labelElement.style.backgroundColor = '#000000'
+
+      boxElement.appendChild(labelElement);
+      imageContainer.appendChild(boxElement);
+    }
+  </script>
+</body>
+
+</html>

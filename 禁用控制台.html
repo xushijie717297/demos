@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>禁用控制台</title>
+  </head>
+  <body>
+    <script>
+      function now() {
+        return new Date().getTime();
+      }
+      // 创建大对象数组
+      function createLargeObject() {
+        const largeObject = {};
+        for (let i = 0; i < 500; i++) {
+          largeObject[`${i}`] = `${i}`;
+        }
+        return largeObject;
+      }
+      // 创建大对象数组
+      function createLargeObjectArray() {
+        const largeObject = createLargeObject();
+        const largeObjectArray = [];
+        for (let i = 0; i < 50; i++) {
+          largeObjectArray.push(largeObject);
+        }
+        return largeObjectArray;
+      }
+
+      // 计算打印执行时间
+      function calculateTime(func) {
+        const start = now();
+        func();
+        return now() - start;
+      }
+
+      const largeObjectArray = createLargeObjectArray();
+      let maxPrintTime = 0;
+      setInterval(() => {
+        // table 打印时间
+        const tablePrintTime = calculateTime(() => {
+          console.table(largeObjectArray);
+        });
+        // 普通输出时间
+        const printLogTime = calculateTime(() => {
+          console.log(largeObjectArray);
+        });
+        maxPrintTime = Math.max(maxPrintTime, printLogTime);
+
+        if (tablePrintTime === 0 || maxPrintTime === 0) {
+          return;
+        } else {
+          // 如果打印表格的时间是普通打印的10倍，那么就关闭
+          if (tablePrintTime > maxPrintTime * 10) {
+            // 如果当前表格打印时间大于指定时间，那么将表示打开了devtools
+            console.log("时间对比", tablePrintTime, maxPrintTime);
+            window.close();
+          }
+        }
+      }, 500);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首字母跨行</title>
+    <style>
+        div{
+            width: 120px;
+        }
+        div::first-letter{
+            initial-letter: 2 2; /* 首字母占据了 3 行并下沉了 2 行 */
+        }
+    </style>
+</head>
+<body>
+    <div>山重水复疑无路柳暗花明又一村</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const array = [3, 2, 1];
+      const sortedArray = array.sort();
+      // [1, 2, 3]
+      console.log(sortedArray);
+      // 原数组也变成了 [1, 2, 3]
+      console.log(array);
+      //如果不希望改变数组自身，可以这样做：
+      const array1 = [3, 2, 1];
+      const sortedArray1 = array1.toSorted();
+      // [1, 2, 3]
+      console.log(sortedArray1);
+      // 原数组不变 [3, 2, 1]
+      console.log(array1);
+      //类似的方法还有：
+      // T.prototype.toReversed() -> T
+      // T.prototype.toSorted(compareFn) -> t
+      // T.prototype.toSpliced(start, deleteCount, ...items) -> T
+      // T.prototype.with(index, value) -> T
+
+      const array2 = [1, 2, 3];
+      const newArray = array2.with(1, false); //替换指定索引位置的元素
+
+      // [1, false, 3]
+      console.log(newArray);
+      // 原数组不变 [1, 2, 3]
+      console.log(array2);
+
+      //从尾部查找
+      const array3 = [1, 2, 3];
+      const findLast = array3.findLast((n) => n % 2 === 1);//返回第一个符合条件的元素   查不到返回undefind
+      const findLastIndex = array3.findLastIndex((n) => n % 2 === 1);//返回第一个符合条件的元素索引  查不到返回-1
+      console.log(findLast);//3
+      console.log(findLastIndex);//2
+      // 柯里化示例：将一个接受多个参数的函数转换为一个接受一个参数的函数序列
+function add(a) {
+  return function(b) {
+    console.log(a + b)
+    return a + b;
+  };
+}
+const add5 = add(5);
+console.log(add5(10)); // 15
+console.log(add5(20)); // 25
+
+    </script>
+  </body>
+</html>

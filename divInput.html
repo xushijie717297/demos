@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 输入框 */
+    .dzm-input {
+      padding: 5px;
+      border: 1px solid red;
+    }
+    /* 输入框为空时显示 placeholder */
+    .dzm-input:empty:before {
+      content: attr(placeholder);
+      color: red;
+    }
+    /* 输入框获取焦点时移除 placeholder */
+    .dzm-input:focus:before {
+      content: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- input -->
+  <div class="dzm-input" contenteditable="true" placeholder="请输入内容" onkeydown="myFunction()"></div>
+  <script>
+    // 禁止回车换行
+    function myFunction(){
+      if (window.event && window.event.keyCode == 13) {
+        window.event.returnValue = false;
+      }
+    }
+  </script>
+</body>
+</html>

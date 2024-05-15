@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    
+    var text = "这是一个很长的文字";
+    var x = 50;
+    var y = 50;
+    var maxWidth = 100;
+    var lineHeight = 20;
+    
+    
+    // ctx.font = "16px Arial";
+    // ctx.fillStyle = "black";
+    // wrapText(ctx, text, x, y, maxWidth, lineHeight);
+    // function wrapText(context, text, x, y, maxWidth, lineHeight) {
+    // var words = text.split(' ');
+    // var line = '';
+ 
+    // for(var n = 0; n < words.length; n++) {
+    //     var testLine = line + words[n] + ' ';
+    //     var metrics = context.measureText(testLine);
+    //     var testWidth = metrics.width;
+    //     console.log('%c XSJ-[ testWidth ]-31', 'font-size:13px; background:pink; color:#bf2c9f;', testWidth)
+    //     if (testWidth > maxWidth && n > 0) {
+    //         context.fillText(line, x, y);
+    //         line = words[n] + ' ';
+    //         y += lineHeight;
+    //     } else {
+    //         line = testLine;
+    //     }
+
+    // console.log('%c XSJ-[  ]-39', 'font-size:13px; background:pink; color:#bf2c9f;',line )
+    // }
+// }
+ctx.fillText(text, x, y);
+    var text = "我们需要在这里实现自动换行。";
+    var x = 50;
+    var y = 100;
+ctx.fillText(text, x, y);
+    </script>
+</body>
+</html>

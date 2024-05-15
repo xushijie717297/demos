@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript"> 
+        var watermarkContainer = document.createElement('div');
+        function createContainer (name){
+            watermarkContainer.style.position = 'fixed';
+            watermarkContainer.style.top = '0';
+            watermarkContainer.style.left = '0';
+            watermarkContainer.style.width = '100%';
+            watermarkContainer.style.height = '100%';
+            watermarkContainer.style.pointerEvents = 'none';
+            watermarkContainer.style.zIndex = '9999';
+            watermarkContainer.setAttribute('id', 'example-content')
+            fillWatermarks(name)
+        }
+    
+        // 水印样式设置
+        function createWatermark(name) {
+            var watermarkText = 'test';
+            var watermarkDiv = document.createElement('div');
+            watermarkDiv.style.position = 'absolute';
+            watermarkDiv.style.color = 'rgba(255, 0, 0, 0.4)'; // 调整颜色和透明度
+            watermarkDiv.style.fontSize = '20px'; // 字体大小
+            watermarkDiv.style.transform = 'rotate(-45deg)'; // 旋转角度
+            watermarkDiv.style.whiteSpace = 'nowrap';
+            watermarkDiv.className = 'water-class-name';
+            watermarkDiv.innerText = `
+                ${name.username}
+                ${name.time}
+                ${name.ip}
+            
+            `;
+            return watermarkDiv;
+        }
+        // 根据屏幕大小填充水印
+        function fillWatermarks(name) {
+            // 清空之前的水印
+            watermarkContainer.innerHTML = '';
+            var screenWidth = window.innerWidth;
+            var screenHeight = window.innerHeight;
+            var watermarkWidth = 300; // 水印宽度
+            var watermarkHeight = 400; // 水印高度
+    
+            for (var x = 0; x < screenWidth; x += watermarkWidth) {
+                for (var y = 0; y < screenHeight; y += watermarkHeight) {
+                    var watermarkDiv = createWatermark(name);
+                    watermarkDiv.style.left = x + 'px';
+                    watermarkDiv.style.top = y + 'px';
+                    watermarkContainer.appendChild(watermarkDiv);
+                }
+            }
+        }
+        let name = '云智信安'
+        const info = {
+            time: '2024-04-17T01:26:01Z',
+            username: '云智信安',
+            ip: '10.100.30.73'
+        }
+        window.onresize = fillWatermarks;
+        window.onload = function () {
+            createContainer(info)
+            document.body.appendChild(watermarkContainer);
+            const timerId =  setInterval(function() {
+                console.log('定时器触发了！');
+                createContainer(info)
+                document.body.appendChild(watermarkContainer);
+            }, 10000)
+        }
+         // 添加页面卸载时的事件监听器，清除定时器
+        window.addEventListener('beforeunload', function (event) {
+            clearInterval(timerId);
+        })
+        </script>
+</body>
+</html>

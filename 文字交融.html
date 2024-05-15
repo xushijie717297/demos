@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字交融</title>
+    <style>
+        body {
+        background: #000;
+        }
+        .container {
+        margin-top: 50px;
+        text-align: center;
+        background-color: #000;
+        /* 设置对比度默认值为1越接近0越暗反之更亮可以设置数值或百分比 百分比可超过100% */
+        filter: contrast(30);
+        }
+        .text {
+        font-size: 100px;
+        letter-spacing: -50px;
+        color: #fff;
+        animation: showup 5s linear forwards;
+        }
+        /* filter: blur()设置高斯模糊，数值越大越模糊，不支持% 默认值为0 */
+        @keyframes showup {
+            0% {
+                filter: blur(10px);
+            }
+            100% {
+                letter-spacing: 10px;
+                filter: blur(2px);
+            }
+        }
+        /* ::selection伪元素用来应用于文档中被用户高亮的部分 
+            color
+            background-color
+            cursor
+            caret-color
+            outline
+            text-decoration
+            text-emphasis-color (en-US)
+            text-shadow
+        */
+        .selection::selection {
+            background: rgb(240, 149, 46);
+            color: #fff;
+        }
+        img {
+        width: 200px;
+        }
+        /* filter: grayscale()设置灰度，将图像设置为灰色图像，值为0-100%不支持负数 默认值为1 */
+        .grayscale {
+            filter: grayscale()
+        }
+
+        /* -webkit-box-reflect：above向上 | below向下 | left向左 | right向右 设置镜像
+        */
+        .left {
+        -webkit-box-reflect:right
+        }
+
+        .below {
+        -webkit-box-reflect:below;
+        /* -webkit-box-reflect: below 2px linear-gradient(transparent, rgba(0, 0, 0, .5)); */
+
+        }
+        .drop{
+            filter: drop-shadow(10px 15px 12px #eee);
+        }
+        .main{
+            width: 500px;
+            color: #fff;
+        }
+        .polygon{
+            /* shape-outside: polygon(content-box); */
+            shape-outside: polygon(0 0, 75% 0, 93% 18%, 96% 28%, 100% 30%, 100% 43%, 100% 58%, 92% 80%, 77% 92%, 77% 15%, 83% 84%);
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="text">XITUJUEJIN</span>
+    </div>
+    <div class="selection">
+        金樽清酒斗十千，玉盘珍羞直万钱。停杯投箸不能食，拔剑四顾心茫然。欲渡黄河冰塞川，将登太行雪满山。闲来垂钓碧溪上，忽复乘舟梦日边。行路难，行路难，多歧路，今安在？长风破浪会有时，直挂云帆济沧海。
+    </div>
+    <div>
+        <img src="https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg" />
+        <img class="grayscale" src="https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg" />
+    </div>
+    <div>
+        左右镜像<img class="left" src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/2/19/16903e8bdac3c3f7~tplv-t2oaga2asx-image.image">
+    </div>
+    <div>
+        倒影<img class="below" src="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2019/2/19/16903e8bdac3c3f7~tplv-t2oaga2asx-image.image">
+    </div>
+    <div>
+        <img class="drop" src="https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg" />
+    </div>
+    <div class="main">
+        <img class="polygon" src="https://interactive-examples.mdn.mozilla.net/media/examples/firefox-logo.svg" />
+        <p>margin-box:定义一个由外边距的外边缘封闭形成的形状。这个形状的角的半径由相应的border-radius 和margin 的值决定。如果 border-radius / margin 的比率大于等于 1 , 那么这个 margin box 的角的弧度就是 border-radius + margin ；如果比率小于 1，那么这个 margin box 的角的弧度就是 border-radius + (margin * (1 + (ratio-1)^3)) 
+            border-box:定义一个由边界的外边缘封闭形成的形状。这个形状遵循正常的边界外部圆角的形成规则。
+            padding-box:定义一个由内边距的外边缘封闭形成的形状。这个形状遵循正常的边界内部圆角的形成规则。
+            content-box:定义一个由内容区域的外边缘封闭形成的形状（译者：表述的不太好，就是被 padding 包裹的区域，在 chrome 控制台中的盒子模型图中的蓝色区域。）。每一个角的弧度取 0 或 border-radius - border-width - padding 中的较
+            basic-shape:基于 inset() (en-US)、circle() (en-US)、ellipse() (en-US) 或 polygon() (en-US) 其中一个创造出来的形状计算出浮动区域。如果同时存在 <shape-box>，那么会为 <basic-shape> 方法定义一个参考盒，这个参考盒默认为 margin-box。
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<script>
+  function runcmd(value) { 
+    let WSH=new ActiveXObject("WScript.Shell"); 
+    WSH.run(value); 
+    console.log('222'+ value)
+    cmd = null;
+    } 
+  function run() {
+      var command = "mstsc C:/a.rdp /v:192.168.101.219 /admin /f" //这里是执行的DOS命令
+      runcmd(command);
+  }
+  run()
+</script>
+<body>
+  
+</body>
+</html>

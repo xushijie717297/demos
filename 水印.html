@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* 定义一个用于放置水印的绝对定位容器 */
+        .watermark-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none; /* 不影响其他元素的点击事件 */
+        }
+        
+        /* 定义水印样式 */
+        .watermark-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.1); /* 低透明度白色 */
+            transform: rotate(-30deg) translateX(-20%); /* 旋转和偏移以达到暗水印效果 */
+            white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform-origin: center;
+            opacity: 0.05; /* 调整透明度至较低水平 */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 页面主体内容 -->
+
+    <!-- 暗水印 -->
+    <div class="watermark-container">
+        <div class="watermark-text">我爱Web前端</div>
+    </div>
+
+    <!-- JavaScript部分，根据需求动态生成多个水印 -->
+    <script>
+        // 动态生成多个水印
+        function createWatermarks(text, count) {
+            const container = document.querySelector('.watermark-container');
+            for (let i = 0; i < count; i++) {
+                let watermark = document.createElement('div');
+                watermark.className = 'watermark-text';
+                watermark.textContent = text;
+                // 可能会随机设置水印的位置和旋转角度
+                watermark.style.transform = `rotate(${Math.random() * 360}deg) translateY(${Math.random() * 10}%))`;
+                container.appendChild(watermark);
+            }
+        }
+
+        // 初始化暗水印
+        window.onload = function () {
+            createWatermarks("我爱Web前端", 10); // 生成10个重复的水印
+        };
+    </script>
+</body>
+</html>

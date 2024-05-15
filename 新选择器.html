@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新选择器</title>
+    <style>
+        :is(.qwe) {
+            color: blue;
+        }
+        :is([class^="qwer"]){
+            color: yellow;
+        }
+        .asd  {
+            color: green;
+        }
+        /* 最低优先级 */
+        :where([class^="asd"]) a {
+            color: red
+        }
+        /* 基于其他元素进行匹配 */
+        /* 选择直接包含 p 元素的 div */
+        div:has(> p) {
+            border: 1px solid black;
+        }
+        /* 选择后面跟着 p 元素的 div */
+        div:has(+ p) {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p class="qwe">打上班下次VB你就看好续费就不能</p>
+    <p class="qwer">打上班下次VB你就看好续费就不能</p>
+    <p class="qwert">打上班下次VB你就看好续费就不能</p>
+    <p class="asd">打上班下次VB你就看好续费就不能</p>
+    <div>
+        <p>打上班下次VB你就看好续费就不能</p>
+    </div>
+    <div class="asd">打上班下次VB你就看好续费就不能</div>
+    <div>阿萨德GV计划表行政村vu计划几把</div>
+    <p>打上班下次VB你就看好续费就不能</p>
+</body>
+</html>

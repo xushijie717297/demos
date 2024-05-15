@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>画中画</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      gap: 15px;
+    }
+
+    #main-content {
+      padding: 15px;
+      border: 1px solid red;
+    }
+
+    .svg-icon {
+      fill: var(--color);
+      width: 48px;
+      height: 48px;
+      transition: fill 300ms;
+    }
+
+    .loader {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      background: transparent;
+      border-radius: 50%;
+      box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.55);
+      border: 1px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .loader::before {
+      content: '';
+      position: absolute;
+      inset: 20px;
+      background: transparent;
+      border: 1px dashed#444;
+      border-radius: 50%;
+      box-shadow: inset -5px -5px 25px rgba(0, 0, 0, 0.25),
+        inset 5px 5px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .loader::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px dashed#444;
+      box-shadow: inset -5px -5px 25px rgba(0, 0, 0, 0.25),
+        inset 5px 5px 35px rgba(0, 0, 0, 0.25);
+    }
+
+    .loader span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      background: transparent;
+      transform-origin: top left;
+      animation: radar81 2s linear infinite;
+      border-top: 1px dashed #fff;
+    }
+
+    .loader span::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: seagreen;
+      transform-origin: top left;
+      transform: rotate(-55deg);
+      filter: blur(30px) drop-shadow(20px 20px 20px seagreen);
+    }
+
+    @keyframes radar81 {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <button id="popupbtn" title="Toggle PIP Mode">
+    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+      <path
+        d="M38 14H22v12h16V14zm4-8H6c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 3.96 4 3.96h36c2.21 0 4-1.76 4-3.96V10c0-2.21-1.79-4-4-4zm0 32.03H6V9.97h36v28.06z" />
+    </svg>
+  </button>
+  <div class="main">
+    <div id="main-content">
+      <div class="loader">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const isPip = () => "documentPictureInPicture" in window
+    const pipActuator = (targetDomId, popupBtnDomId) => {
+      if (!isPip()) {
+        alert("您的浏览器不支持画中画模式！");
+        return;
+      }
+      let targetContainer = null;
+      let pipWindow = null;
+      let pipTip = null;
+
+      async function enterPiP() {
+        const target = document.querySelector(targetDomId);
+        targetContainer = target.parentNode;
+
+        pipTip = document.createElement("div");
+        pipTip.classList.add("pip-tip");
+        pipTip.innerHTML = "画中画模式已开启";
+        targetContainer.appendChild(pipTip);
+
+        const pipOptions = {
+          initialAspectRatio: target.clientWidth / target.clientHeight,
+          lockAspectRatio: true,
+          copyStyleSheets: true,
+        };
+
+        pipWindow = await documentPictureInPicture.requestWindow(pipOptions);
+
+        // 从初始文档复制样式表
+        // 使画中画里面的画面和初始文档保持一致
+        [...document.styleSheets].forEach((styleSheet) => {
+          try {
+            const cssRules = [...styleSheet.cssRules].map((rule) => rule.cssText).join("");
+            const style = document.createElement("style");
+
+            style.textContent = cssRules;
+            pipWindow.document.head.appendChild(style);
+          } catch (e) {
+            const link = document.createElement("link");
+
+            link.rel = "stylesheet";
+            link.type = styleSheet.type;
+            link.media = styleSheet.media;
+            link.href = styleSheet.href;
+            pipWindow.document.head.appendChild(link);
+          }
+        });
+
+        // 将目标添加到PiP窗口
+        pipWindow.document.body.append(target);
+
+        // 监听pip点击事件
+        pipWindow.addEventListener('click', () => {
+          console.log('点击了画中画文档');
+        });
+        // 监听PiP结束事件，将目标放回原位
+        pipWindow.addEventListener("unload", onLeavePiP.bind(pipWindow), {
+          once: true,
+        });
+      }
+
+      // 当PiP窗口关闭时调用
+      function onLeavePiP() {
+        if (this !== pipWindow) {
+          return;
+        }
+
+        // 将目标添加回目标窗口
+        const target = pipWindow.document.querySelector(targetDomId);
+        targetContainer.append(target);
+        targetContainer.removeChild(pipTip)
+        pipWindow.close();
+
+        pipWindow = null;
+        targetContainer = null;
+      }
+      document.querySelector(popupBtnDomId).addEventListener("click", () => {
+        if (!pipWindow) {
+          enterPiP();
+        } else {
+          onLeavePiP.bind(pipWindow)();
+        }
+      });
+    }
+    pipActuator("#main-content", "#popupbtn");
+  </script>
+</body>
+
+</html>

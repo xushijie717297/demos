@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>实现div拖动和缩放</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    .home {
+      width: 100%;
+      height: 100%;
+      background-color: #488bd4;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .map {
+      width: 1000px;
+      height: 1000px;
+      background-color: #28c074;
+      border: 4px solid #450c28;
+    }
+
+    .div1 {
+      width: 200px;
+      height: 200px;
+      background-color: #F5D370;
+      position: absolute;
+      z-index: 1;
+      top: 500px;
+      left: 200px;
+    }
+
+    .dot {
+      width: 5px;
+      height: 5px;
+      background-color: #ec4141;
+      position: absolute;
+      z-index: 2;
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="home">
+    <div class="map">
+        <img  src="http://10.100.30.8:7080/dmr/file/image/1655726310882-20230913101214576.jpg"/>
+      
+    </div>
+  </div>
+
+  <script>
+    var mapElem = document.getElementsByClassName('map')[0]
+    var flag = false
+    var moveDistance = {}
+    var animation = {
+      x: 100,
+      y: 100,
+      scale: 1,
+      duration: 0,
+    }
+    
+    // 设置样式
+    function setStyle(elem, obj) {
+      for (var key in obj) {
+        var value = obj[key]
+        elem.style.setProperty(key, value)
+      }
+    }
+
+    // 获取元素相对于目标元素的 offsetTop offsetLeft
+    function getElementTopLeft(elem, target) {
+      if (elem === target) return {
+        top: 0,
+        left: 0,
+      }
+
+      target || (target = null)
+      var elemTop = elem.offsetTop
+      var elemLeft = elem.offsetLeft
+
+      elem = elem.offsetParent
+      while (elem !== target) {
+        elemTop += elem.offsetTop
+        elemLeft += elem.offsetLeft
+        elem = elem.offsetParent
+      }
+
+      return {
+        top: elemTop,
+        left: elemLeft,
+      }
+    }
+
+    function setMapStyle (obj) {
+      var x = obj.x
+      var y = obj.y
+      var scale = obj.scale
+      var duration = obj.duration
+      setStyle(mapElem, {
+        'transform-origin': '0px 0px',
+        transition: `all ${duration / 1000}s ease-out 0s`,
+        transform: `translate3d(${x}px, ${y}px, 0px) scale3d(${scale}, ${scale}, 1)`,
+      }) 
+    }
+
+    // 测试使用
+    setMapStyle(animation)
+
+
+    // 鼠标按钮被按下
+    mapElem.onmousedown = function (event) {
+      // 0 为鼠标左键
+      if (event.button === 0) {
+        flag = true
+
+        // clientX 鼠标指针相对于浏览器页面左边的水平坐标
+        moveDistance = {
+          x: event.clientX - animation.x,
+          y: event.clientY - animation.y,
+        }
+      }
+    }
+
+    // 鼠标按键被松开
+    mapElem.onmouseup = function (event) {
+      // 0 为鼠标左键
+      if (event.button === 0) {
+        flag = false
+      }
+    }
+
+    // 鼠标被移动
+    mapElem.onmousemove = function (event) {
+      if (flag) {
+        var left = event.clientX - moveDistance.x
+        var top = event.clientY - moveDistance.y
+
+        animation = {
+          x: left,
+          y: top,
+          scale: animation.scale,
+          duration: 0,
+        }
+
+        setMapStyle(animation)
+      }
+    }
+
+    // 鼠标移出
+    mapElem.onmouseout = function (event) {
+      var mapIndex = event.path.findIndex(f => f === mapElem)
+      var targetIndex = event.path.findIndex(f => f === event.relatedTarget)
+      if (targetIndex > mapIndex) {
+        flag = false
+      }
+    }
+
+    // 鼠标滚轮
+    mapElem.onwheel = function (event) {
+      var oldScale = animation.scale
+      var scale = animation.scale
+
+      if (event.wheelDelta > 0) {
+        // 上滑放大
+        var maxScale = 3
+        if (scale === maxScale) return
+        scale = (scale + 0.1).toFixed(1) * 1
+        if (scale >= maxScale) scale = maxScale
+      } else {
+        // 下滑缩小
+        var minScale = 0.1
+        if (scale === minScale) return
+        scale = (scale - 0.1).toFixed(1) * 1
+        if (scale <= minScale) scale = minScale
+      }
+
+      var ret = getElementTopLeft(event.target, mapElem)
+      let left = animation.x + (event.offsetX + ret.left + 4) * (oldScale - scale)
+      let top = animation.y + (event.offsetY + ret.top + 4) * (oldScale - scale)
+
+      animation = {
+        x: left,
+        y: top,
+        scale: scale,
+        duration: 300,
+      }
+
+      console.log(animation)
+
+      setMapStyle(animation)
+    }
+  </script>
+</body>
+
+</html>

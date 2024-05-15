@@ -1,0 +1,6363 @@
+[
+    {
+        "id": 1,
+        "name": "事件接收时间",
+        "value": "lrecepttime",
+        "type": 2,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 4,
+        "name": "源端口",
+        "value": "isrcport",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 3,
+        "name": "源地址",
+        "value": "csrcip",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 5,
+        "name": "操作",
+        "value": "coperation",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "/启动",
+                "value": "/start",
+                "children": null
+            },
+            {
+                "name": "/移动",
+                "value": "/move",
+                "children": null
+            },
+            {
+                "name": "/修改",
+                "value": "/modify",
+                "children": null
+            },
+            {
+                "name": "/导入",
+                "value": "/import",
+                "children": null
+            },
+            {
+                "name": "/拒绝",
+                "value": "/deny",
+                "children": null
+            },
+            {
+                "name": "/未定义",
+                "value": "/-999",
+                "children": null
+            },
+            {
+                "name": "/导出",
+                "value": "/export",
+                "children": null
+            },
+            {
+                "name": "/丢失",
+                "value": "/lost",
+                "children": null
+            },
+            {
+                "name": "/授权",
+                "value": "/grant",
+                "children": null
+            },
+            {
+                "name": "/上传",
+                "value": "/upload",
+                "children": null
+            },
+            {
+                "name": "/禁用",
+                "value": "/disable",
+                "children": null
+            },
+            {
+                "name": "/转发",
+                "value": "/relay",
+                "children": null
+            },
+            {
+                "name": "/下载",
+                "value": "/download",
+                "children": null
+            },
+            {
+                "name": "/解锁",
+                "value": "/unlock",
+                "children": null
+            },
+            {
+                "name": "/修复",
+                "value": "/fix",
+                "children": null
+            },
+            {
+                "name": "/审计",
+                "value": "/audit",
+                "children": null
+            },
+            {
+                "name": "/阻断",
+                "value": "/block",
+                "children": null
+            },
+            {
+                "name": "/注册",
+                "value": "/register",
+                "children": null
+            },
+            {
+                "name": "/保存",
+                "value": "/save",
+                "children": null
+            },
+            {
+                "name": "/登录",
+                "value": "/login",
+                "children": null
+            },
+            {
+                "name": "/恢复",
+                "value": "/restore",
+                "children": null
+            },
+            {
+                "name": "/升级",
+                "value": "/upgrad",
+                "children": null
+            },
+            {
+                "name": "/请求",
+                "value": "/request",
+                "children": null
+            },
+            {
+                "name": "/拔出",
+                "value": "/pullout",
+                "children": null
+            },
+            {
+                "name": "/禁用",
+                "value": "/forbid",
+                "children": null
+            },
+            {
+                "name": "/复位",
+                "value": "/reset",
+                "children": null
+            },
+            {
+                "name": "/阅读",
+                "value": "/read",
+                "children": null
+            },
+            {
+                "name": "/更新",
+                "value": "/update",
+                "children": null
+            },
+            {
+                "name": "/卸载",
+                "value": "/uninstall",
+                "children": null
+            },
+            {
+                "name": "/清除",
+                "value": "/clear",
+                "children": null
+            },
+            {
+                "name": "/同步",
+                "value": "/sync",
+                "children": null
+            },
+            {
+                "name": "/访问",
+                "value": "/access",
+                "children": null
+            },
+            {
+                "name": "/允许",
+                "value": "/permit",
+                "children": null
+            },
+            {
+                "name": "/复制",
+                "value": "/copy",
+                "children": null
+            },
+            {
+                "name": "/搜索",
+                "value": "/find",
+                "children": null
+            },
+            {
+                "name": "/打印",
+                "value": "/print",
+                "children": null
+            },
+            {
+                "name": "/发送",
+                "value": "/send",
+                "children": null
+            },
+            {
+                "name": "/提示",
+                "value": "/tip",
+                "children": null
+            },
+            {
+                "name": "/监视",
+                "value": "/monitor",
+                "children": null
+            },
+            {
+                "name": "/切换",
+                "value": "/switchover",
+                "children": null
+            },
+            {
+                "name": "/注册/更新",
+                "value": "/register/update",
+                "children": null
+            },
+            {
+                "name": "/忽略",
+                "value": "/ignore",
+                "children": null
+            },
+            {
+                "name": "/启用",
+                "value": "/enable",
+                "children": null
+            },
+            {
+                "name": "/打开",
+                "value": "/open",
+                "children": null
+            },
+            {
+                "name": "/取消",
+                "value": "/cancle",
+                "children": null
+            },
+            {
+                "name": "/注销",
+                "value": "/exit",
+                "children": null
+            },
+            {
+                "name": "/增加",
+                "value": "/add",
+                "children": null
+            },
+            {
+                "name": "/替代",
+                "value": "/substitute",
+                "children": null
+            },
+            {
+                "name": "/查看",
+                "value": "/view",
+                "children": null
+            },
+            {
+                "name": "/分配",
+                "value": "/allocate",
+                "children": null
+            },
+            {
+                "name": "/接收",
+                "value": "/receive",
+                "children": null
+            },
+            {
+                "name": "/测试",
+                "value": "/test",
+                "children": null
+            },
+            {
+                "name": "/生成",
+                "value": "/generate",
+                "children": null
+            },
+            {
+                "name": "/配置",
+                "value": "/conf",
+                "children": null
+            },
+            {
+                "name": "/其它",
+                "value": "/other",
+                "children": null
+            },
+            {
+                "name": "/删除",
+                "value": "/delete",
+                "children": null
+            },
+            {
+                "name": "/记录",
+                "value": "/log",
+                "children": null
+            },
+            {
+                "name": "/扫描",
+                "value": "/scan",
+                "children": null
+            },
+            {
+                "name": "/停止",
+                "value": "/stop",
+                "children": null
+            },
+            {
+                "name": "/撤销",
+                "value": "/revoke",
+                "children": null
+            },
+            {
+                "name": "/重启",
+                "value": "/restart",
+                "children": null
+            },
+            {
+                "name": "/插入",
+                "value": "/insert",
+                "children": null
+            },
+            {
+                "name": "/备份",
+                "value": "/backup",
+                "children": null
+            },
+            {
+                "name": "/检测",
+                "value": "/detect",
+                "children": null
+            },
+            {
+                "name": "/关闭",
+                "value": "/close",
+                "children": null
+            },
+            {
+                "name": "/创建",
+                "value": "/create",
+                "children": null
+            },
+            {
+                "name": "/锁定",
+                "value": "/lock",
+                "children": null
+            },
+            {
+                "name": "/设置",
+                "value": "/set",
+                "children": null
+            },
+            {
+                "name": "/显示",
+                "value": "/show",
+                "children": null
+            },
+            {
+                "name": "/连接",
+                "value": "/conn",
+                "children": null
+            },
+            {
+                "name": "/丢弃",
+                "value": "/drop",
+                "children": null
+            },
+            {
+                "name": "/认证",
+                "value": "/auth",
+                "children": null
+            },
+            {
+                "name": "/确认",
+                "value": "/confirm",
+                "children": null
+            },
+            {
+                "name": "/核查",
+                "value": "/check",
+                "children": null
+            },
+            {
+                "name": "/签发",
+                "value": "/issue",
+                "children": null
+            },
+            {
+                "name": "/安装",
+                "value": "/install",
+                "children": null
+            },
+            {
+                "name": "/注销",
+                "value": "/logout",
+                "children": null
+            },
+            {
+                "name": "/重启",
+                "value": "/reboot",
+                "children": null
+            },
+            {
+                "name": "/查询",
+                "value": "/query",
+                "children": null
+            },
+            {
+                "name": "/获取",
+                "value": "/get",
+                "children": null
+            },
+            {
+                "name": "/执行",
+                "value": "/exec",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 2,
+        "name": "用户名称",
+        "value": "cusername",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 6,
+        "name": "目的地址",
+        "value": "cdstip",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 7,
+        "name": "目的端口",
+        "value": "idstport",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 8,
+        "name": "对象",
+        "value": "cobject",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "/物理设施/门禁",
+                "value": "/phy/egs",
+                "children": null
+            },
+            {
+                "name": "/物理设施",
+                "value": "/phy",
+                "children": null
+            },
+            {
+                "name": "/进程",
+                "value": "/process",
+                "children": null
+            },
+            {
+                "name": "/应用程序",
+                "value": "/app",
+                "children": null
+            },
+            {
+                "name": "/策略",
+                "value": "/policy",
+                "children": null
+            },
+            {
+                "name": "/用户",
+                "value": "/user",
+                "children": null
+            },
+            {
+                "name": "/应用程序/数据库",
+                "value": "/app/db",
+                "children": null
+            },
+            {
+                "name": "/注册表",
+                "value": "/register",
+                "children": null
+            },
+            {
+                "name": "/应用程序/服务",
+                "value": "/app/service",
+                "children": null
+            },
+            {
+                "name": "/网络",
+                "value": "/net",
+                "children": null
+            },
+            {
+                "name": "/操作系统",
+                "value": "/os",
+                "children": null
+            },
+            {
+                "name": "/网络/vpn",
+                "value": "/net/vpn",
+                "children": null
+            },
+            {
+                "name": "/网络/报文",
+                "value": "/net/pkt",
+                "children": null
+            },
+            {
+                "name": "/文件",
+                "value": "/file",
+                "children": null
+            },
+            {
+                "name": "/网络/会话",
+                "value": "/net/session",
+                "children": null
+            },
+            {
+                "name": "/CPU",
+                "value": "/cpu",
+                "children": null
+            },
+            {
+                "name": "/磁盘",
+                "value": "/disk",
+                "children": null
+            },
+            {
+                "name": "/网络/链路",
+                "value": "/net/link",
+                "children": null
+            },
+            {
+                "name": "/网络/接口",
+                "value": "/net/interface",
+                "children": null
+            },
+            {
+                "name": "/内存",
+                "value": "/memory",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 9,
+        "name": "结果",
+        "value": "cresult",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "允许",
+                "value": "permit",
+                "children": null
+            },
+            {
+                "name": "未知",
+                "value": "noresponse",
+                "children": null
+            },
+            {
+                "name": "阻断",
+                "value": "block",
+                "children": null
+            },
+            {
+                "name": "拦截",
+                "value": "Intercept",
+                "children": null
+            },
+            {
+                "name": "拒绝",
+                "value": "deny",
+                "children": null
+            },
+            {
+                "name": "成功",
+                "value": "1",
+                "children": null
+            },
+            {
+                "name": "企图",
+                "value": "attempt",
+                "children": null
+            },
+            {
+                "name": "未知",
+                "value": "4",
+                "children": null
+            },
+            {
+                "name": "失陷",
+                "value": "fall",
+                "children": null
+            },
+            {
+                "name": "失败",
+                "value": "2",
+                "children": null
+            },
+            {
+                "name": "成功",
+                "value": "success",
+                "children": null
+            },
+            {
+                "name": "完成",
+                "value": "5",
+                "children": null
+            },
+            {
+                "name": "失败",
+                "value": "failed",
+                "children": null
+            },
+            {
+                "name": "无结果",
+                "value": "-1",
+                "children": null
+            },
+            {
+                "name": "超时",
+                "value": "3",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 10,
+        "name": "持续时间",
+        "value": "lduration",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 11,
+        "name": "响应",
+        "value": "ireponse",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "允许",
+                "value": "0",
+                "children": null
+            },
+            {
+                "name": "无响应",
+                "value": "-1",
+                "children": null
+            },
+            {
+                "name": "修复",
+                "value": "8",
+                "children": null
+            },
+            {
+                "name": "拒绝",
+                "value": "1",
+                "children": null
+            },
+            {
+                "name": "删除",
+                "value": "5",
+                "children": null
+            },
+            {
+                "name": "发现",
+                "value": "3",
+                "children": null
+            },
+            {
+                "name": "清除",
+                "value": "4",
+                "children": null
+            },
+            {
+                "name": "隔离",
+                "value": "6",
+                "children": null
+            },
+            {
+                "name": "查杀",
+                "value": "7",
+                "children": null
+            },
+            {
+                "name": "丢弃",
+                "value": "2",
+                "children": null
+            },
+            {
+                "name": "重启",
+                "value": "10",
+                "children": null
+            },
+            {
+                "name": "重置",
+                "value": "9",
+                "children": null
+            },
+            {
+                "name": "忽略",
+                "value": "11",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 12,
+        "name": "发送流量",
+        "value": "lsend",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 13,
+        "name": "接收流量",
+        "value": "lreceive",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 14,
+        "name": "归并数目",
+        "value": "imergecount",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 15,
+        "name": "事件名称",
+        "value": "ceventname",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 16,
+        "name": "事件摘要",
+        "value": "ceventdigest",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 17,
+        "name": "事件分类",
+        "value": "ceventtype",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "/认证授权/账号管理",
+                "value": "/aaa/accoutmgr",
+                "children": null
+            },
+            {
+                "name": "/安全预警/其它",
+                "value": "/warning/other",
+                "children": null
+            },
+            {
+                "name": "/恶意代码/僵尸软件",
+                "value": "/malware/botnet",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/僵尸攻击",
+                "value": "/attack/bot",
+                "children": null
+            },
+            {
+                "name": "/信息危害/信息窃取",
+                "value": "/harm/steal",
+                "children": null
+            },
+            {
+                "name": "/系统状态/其它",
+                "value": "/stat/other",
+                "children": null
+            },
+            {
+                "name": "/设备故障/链路故障",
+                "value": "/fault/link",
+                "children": null
+            },
+            {
+                "name": "/认证授权/账号管理",
+                "value": "/auth/accmgr",
+                "children": null
+            },
+            {
+                "name": "/网络连接/远程控制",
+                "value": "/access/remotecontrol",
+                "children": null
+            },
+            {
+                "name": "/认证授权/认证异常",
+                "value": "/aaa/abnormal",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/密码破解",
+                "value": "/attack/pwd",
+                "children": null
+            },
+            {
+                "name": "/系统状态/状态监控",
+                "value": "/stat/monitor",
+                "children": null
+            },
+            {
+                "name": "/网络连接/会话日志",
+                "value": "/access/session",
+                "children": null
+            },
+            {
+                "name": "/网络连接/源nat转换",
+                "value": "/access/snat",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/欺骗攻击",
+                "value": "/attack/spoof",
+                "children": null
+            },
+            {
+                "name": "/信息危害/网页纂改",
+                "value": "/info/distort",
+                "children": null
+            },
+            {
+                "name": "/操作记录/数据操作",
+                "value": "/opr/db",
+                "children": null
+            },
+            {
+                "name": "/信息刺探/其它",
+                "value": "/spy/other",
+                "children": null
+            },
+            {
+                "name": "/安全预警/漏洞预警",
+                "value": "/sec/leak",
+                "children": null
+            },
+            {
+                "name": "/信息危害/不良信息",
+                "value": "/info/harm",
+                "children": null
+            },
+            {
+                "name": "/设备故障",
+                "value": "/fault",
+                "children": null
+            },
+            {
+                "name": "/网络访问/其它",
+                "value": "/acc/other",
+                "children": null
+            },
+            {
+                "name": "/操作记录/软件维护",
+                "value": "/opr/soft",
+                "children": null
+            },
+            {
+                "name": "/网络连接/IM通讯",
+                "value": "/access/im",
+                "children": null
+            },
+            {
+                "name": "/恶意代码",
+                "value": "/malware",
+                "children": null
+            },
+            {
+                "name": "/网络连接/其它",
+                "value": "/access/other",
+                "children": null
+            },
+            {
+                "name": "/安全预警/其它",
+                "value": "/sec/other",
+                "children": null
+            },
+            {
+                "name": "/信息刺探/漏洞扫描",
+                "value": "/spy/vuln",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/NDP攻击",
+                "value": "/attack/ndp",
+                "children": null
+            },
+            {
+                "name": "/信息危害/传播非法信息",
+                "value": "/harm/spread",
+                "children": null
+            },
+            {
+                "name": "/操作记录/系统维护",
+                "value": "/opr/sys",
+                "children": null
+            },
+            {
+                "name": "/恶意代码/病毒",
+                "value": "/malware/virus",
+                "children": null
+            },
+            {
+                "name": "/信息危害/信息收集",
+                "value": "/info/collection",
+                "children": null
+            },
+            {
+                "name": "/信息危害/网络仿冒",
+                "value": "/harm/counterfeit",
+                "children": null
+            },
+            {
+                "name": "未定义",
+                "value": "-999",
+                "children": null
+            },
+            {
+                "name": "/攻击链",
+                "value": "/killchain",
+                "children": null
+            },
+            {
+                "name": "/网络连接/查询职位",
+                "value": "/access/job",
+                "children": null
+            },
+            {
+                "name": "/设备故障/阈值告警",
+                "value": "/fault/threshole",
+                "children": null
+            },
+            {
+                "name": "/安全预警/病毒预警",
+                "value": "/sec/virus",
+                "children": null
+            },
+            {
+                "name": "/网络连接/DNS日志",
+                "value": "/access/dns",
+                "children": null
+            },
+            {
+                "name": "/恶意代码/病毒",
+                "value": "/malware/viruses",
+                "children": null
+            },
+            {
+                "name": "/系统状态",
+                "value": "/stat",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/ARP攻击",
+                "value": "/attack/arp",
+                "children": null
+            },
+            {
+                "name": "/安全预警/异常流量",
+                "value": "/warning/stream",
+                "children": null
+            },
+            {
+                "name": "/认证授权/安全认证",
+                "value": "/aaa/authention",
+                "children": null
+            },
+            {
+                "name": "/网络连接/正常访问",
+                "value": "/access/normal",
+                "children": null
+            },
+            {
+                "name": "/认证授权/其它",
+                "value": "/aaa/other",
+                "children": null
+            },
+            {
+                "name": "/设备故障/软件故障",
+                "value": "/fault/soft",
+                "children": null
+            },
+            {
+                "name": "/恶意代码/间谍软件",
+                "value": "/malware/spyware",
+                "children": null
+            },
+            {
+                "name": "/信息危害/网络仿冒",
+                "value": "/info/phishing",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵",
+                "value": "/att",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/提权攻击",
+                "value": "/att/right",
+                "children": null
+            },
+            {
+                "name": "/系统状态/地址冲突",
+                "value": "/stat/conflict",
+                "children": null
+            },
+            {
+                "name": "/网络扫描/系统探测",
+                "value": "/spy/system",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/脚本攻击",
+                "value": "/attack/script",
+                "children": null
+            },
+            {
+                "name": "/网络连接/P2P连接",
+                "value": "/access/p2p",
+                "children": null
+            },
+            {
+                "name": "/其它分类",
+                "value": "/other",
+                "children": null
+            },
+            {
+                "name": "/恶意代码/流氓软件",
+                "value": "/malware/adware",
+                "children": null
+            },
+            {
+                "name": "/信息危害/垃圾信息",
+                "value": "/harm/spam",
+                "children": null
+            },
+            {
+                "name": "/操作记录/其它",
+                "value": "/opr/other",
+                "children": null
+            },
+            {
+                "name": "/信息危害/信息泄漏",
+                "value": "/info/leakage",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/枚举尝试",
+                "value": "/attack/enumeration",
+                "children": null
+            },
+            {
+                "name": "/系统运维/违规和误操作",
+                "value": "/maintenance/illegal",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/域名劫持",
+                "value": "/attack/dns",
+                "children": null
+            },
+            {
+                "name": "/信息刺探/服务探测",
+                "value": "/spy/port",
+                "children": null
+            },
+            {
+                "name": "/信息危害/其它",
+                "value": "/harm/other",
+                "children": null
+            },
+            {
+                "name": "/系统状态/系统启动或重启",
+                "value": "/stat/start",
+                "children": null
+            },
+            {
+                "name": "/系统状态/状态改变",
+                "value": "/stat/change",
+                "children": null
+            },
+            {
+                "name": "/认证授权/其它",
+                "value": "/auth/other",
+                "children": null
+            },
+            {
+                "name": "/系统状态/运行报告",
+                "value": "/stat/info",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/SQL注入",
+                "value": "/att/sql",
+                "children": null
+            },
+            {
+                "name": "/网络连接/上网行为日志",
+                "value": "/access/web",
+                "children": null
+            },
+            {
+                "name": "/设备故障/配置不当",
+                "value": "/fault/sysconfig",
+                "children": null
+            },
+            {
+                "name": "/网络连接/数据传输",
+                "value": "/access/transmit",
+                "children": null
+            },
+            {
+                "name": "/系统运维",
+                "value": "/maintenance",
+                "children": null
+            },
+            {
+                "name": "/网络连接/Mail",
+                "value": "/access/mail",
+                "children": null
+            },
+            {
+                "name": "/安全预警/漏洞预警",
+                "value": "/warning/vulnerability",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/后门攻击",
+                "value": "/attack/backdoor",
+                "children": null
+            },
+            {
+                "name": "/设备故障/其它",
+                "value": "/fault/other",
+                "children": null
+            },
+            {
+                "name": "/系统状态/系统关闭或宕机",
+                "value": "/stat/stop",
+                "children": null
+            },
+            {
+                "name": "/信息危害/垃圾信息",
+                "value": "/info/spam",
+                "children": null
+            },
+            {
+                "name": "/网络连接/绕行访问",
+                "value": "/access/bypass",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/拒绝服务",
+                "value": "/attack/ddos",
+                "children": null
+            },
+            {
+                "name": "/恶意代码/逻辑炸弹",
+                "value": "/malware/bombs",
+                "children": null
+            },
+            {
+                "name": "/恶意代码/网络蠕虫",
+                "value": "/malware/worm",
+                "children": null
+            },
+            {
+                "name": "/认证授权",
+                "value": "/auth",
+                "children": null
+            },
+            {
+                "name": "/信息危害",
+                "value": "/harm",
+                "children": null
+            },
+            {
+                "name": "/设备故障/硬件故障",
+                "value": "/fault/hardware",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/口令猜测",
+                "value": "/att/pwd",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/拒绝服务",
+                "value": "/att/ddos",
+                "children": null
+            },
+            {
+                "name": "/安全预警",
+                "value": "/warning",
+                "children": null
+            },
+            {
+                "name": "/系统运维/系统配置",
+                "value": "/maintenance/syscfg",
+                "children": null
+            },
+            {
+                "name": "/系统运维/软件维护",
+                "value": "/maintenance/soft",
+                "children": null
+            },
+            {
+                "name": "/网络连接/可疑访问",
+                "value": "/access/suspicious",
+                "children": null
+            },
+            {
+                "name": "/网络连接/PBR策略路由",
+                "value": "/access/pbr",
+                "children": null
+            },
+            {
+                "name": "/网络扫描/漏洞扫描",
+                "value": "/spy/vulnerability",
+                "children": null
+            },
+            {
+                "name": "/认证授权",
+                "value": "/aaa",
+                "children": null
+            },
+            {
+                "name": "/认证授权/权限管理",
+                "value": "/aaa/anthority",
+                "children": null
+            },
+            {
+                "name": "/网络连接/网络游戏",
+                "value": "/access/game",
+                "children": null
+            },
+            {
+                "name": "/系统状态/关机或宕机",
+                "value": "/stat/shutdown",
+                "children": null
+            },
+            {
+                "name": "/系统运维/操作审计",
+                "value": "/maintenance/audit",
+                "children": null
+            },
+            {
+                "name": "/网络扫描/主机扫描",
+                "value": "/spy/host",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/SQL注入",
+                "value": "/attack/sql",
+                "children": null
+            },
+            {
+                "name": "/网络连接/流媒体",
+                "value": "/access/streaming-media",
+                "children": null
+            },
+            {
+                "name": "/设备故障/软件故障",
+                "value": "/fault/software",
+                "children": null
+            },
+            {
+                "name": "/系统状态/阈值超限",
+                "value": "/stat/threshold",
+                "children": null
+            },
+            {
+                "name": "/网络访问/会话连接",
+                "value": "/acc/session",
+                "children": null
+            },
+            {
+                "name": "/安全预警/病毒预警",
+                "value": "/warning/virus",
+                "children": null
+            },
+            {
+                "name": "/网络访问/可疑访问",
+                "value": "/acc/suspicious",
+                "children": null
+            },
+            {
+                "name": "/信息刺探/网络扫描",
+                "value": "/spy/net",
+                "children": null
+            },
+            {
+                "name": "/设备故障/资源不足",
+                "value": "/fault/resource",
+                "children": null
+            },
+            {
+                "name": "/网络访问/正常访问",
+                "value": "/acc/normal",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/域名劫持",
+                "value": "/att/hijack",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/会话劫持",
+                "value": "/attack/session",
+                "children": null
+            },
+            {
+                "name": "/信息监控",
+                "value": "/monitor",
+                "children": null
+            },
+            {
+                "name": "/网络访问/违规访问",
+                "value": "/acc/illegal",
+                "children": null
+            },
+            {
+                "name": "/系统状态/执行命令",
+                "value": "/stat/exec",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/XSS攻击",
+                "value": "/attack/xss",
+                "children": null
+            },
+            {
+                "name": "/网络访问/URL访问日志",
+                "value": "/access/url",
+                "children": null
+            },
+            {
+                "name": "/安全预警",
+                "value": "/sec",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/CSRF攻击",
+                "value": "/attack/csfr",
+                "children": null
+            },
+            {
+                "name": "/信息危害/目录遍历",
+                "value": "/info/traversal",
+                "children": null
+            },
+            {
+                "name": "/信息危害/其它",
+                "value": "/info/other",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/漏洞利用",
+                "value": "/attack/exploit",
+                "children": null
+            },
+            {
+                "name": "/恶意代码/其它",
+                "value": "/malware/other",
+                "children": null
+            },
+            {
+                "name": "/信息危害/发表非法言论",
+                "value": "/harm/pub",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/XSS注入",
+                "value": "/att/xss",
+                "children": null
+            },
+            {
+                "name": "/系统运维/其它",
+                "value": "/maintenance/other",
+                "children": null
+            },
+            {
+                "name": "/网络连接/BFD管理",
+                "value": "/access/bfd",
+                "children": null
+            },
+            {
+                "name": "/网络扫描/网络爬虫",
+                "value": "/spy/spider",
+                "children": null
+            },
+            {
+                "name": "/网络连接/投资理财",
+                "value": "/access/investment",
+                "children": null
+            },
+            {
+                "name": "/操作记录",
+                "value": "/opr",
+                "children": null
+            },
+            {
+                "name": "/认证授权/安全认证",
+                "value": "/auth/authention",
+                "children": null
+            },
+            {
+                "name": "/操作记录/配置变更",
+                "value": "/opr/cfg",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/漏洞利用",
+                "value": "/att/vul",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/越权尝试",
+                "value": "/attack/unauthorized",
+                "children": null
+            },
+            {
+                "name": "/系统运维/硬件维护",
+                "value": "/maintenance/hard",
+                "children": null
+            },
+            {
+                "name": "/信息刺探",
+                "value": "/spy",
+                "children": null
+            },
+            {
+                "name": "/设备故障/服务故障",
+                "value": "/fault/server",
+                "children": null
+            },
+            {
+                "name": "/网络连接/网络购物",
+                "value": "/access/shopping",
+                "children": null
+            },
+            {
+                "name": "/网络访问",
+                "value": "/acc",
+                "children": null
+            },
+            {
+                "name": "/网络连接/NDP管理",
+                "value": "/access/ndp",
+                "children": null
+            },
+            {
+                "name": "/信息危害",
+                "value": "/info",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/僵尸攻击",
+                "value": "/att/bot",
+                "children": null
+            },
+            {
+                "name": "/恶意代码/蠕虫",
+                "value": "/malware/worms",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵",
+                "value": "/attack",
+                "children": null
+            },
+            {
+                "name": "/恶意代码/木马",
+                "value": "/malware/trojan",
+                "children": null
+            },
+            {
+                "name": "/网络连接",
+                "value": "/access",
+                "children": null
+            },
+            {
+                "name": "/信息危害/网页篡改",
+                "value": "/harm/distort",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/其它",
+                "value": "/attack/other",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/爬虫攻击",
+                "value": "/attack/crawler",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/后门攻击",
+                "value": "/att/backdoor",
+                "children": null
+            },
+            {
+                "name": "/认证授权/授权管理",
+                "value": "/auth/anthority",
+                "children": null
+            },
+            {
+                "name": "/网络连接/ARP管理",
+                "value": "/access/arp",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/注入攻击",
+                "value": "/attack/inject",
+                "children": null
+            },
+            {
+                "name": "/网络连接/目的nat转换",
+                "value": "/access/dnat",
+                "children": null
+            },
+            {
+                "name": "/设备故障/服务中断",
+                "value": "/fault/interrupt",
+                "children": null
+            },
+            {
+                "name": "/攻击入侵/其它",
+                "value": "/att/other",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 18,
+        "name": "采集类型",
+        "value": "icollecttype",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "snmptrap",
+                "value": "3",
+                "children": null
+            },
+            {
+                "name": "wmi",
+                "value": "8",
+                "children": null
+            },
+            {
+                "name": "textfile",
+                "value": "5",
+                "children": null
+            },
+            {
+                "name": "monitor",
+                "value": "10",
+                "children": null
+            },
+            {
+                "name": "ftp",
+                "value": "9",
+                "children": null
+            },
+            {
+                "name": "netflow",
+                "value": "4",
+                "children": null
+            },
+            {
+                "name": "syslog",
+                "value": "2",
+                "children": null
+            },
+            {
+                "name": "jdbc",
+                "value": "6",
+                "children": null
+            },
+            {
+                "name": "sniffer",
+                "value": "7",
+                "children": null
+            },
+            {
+                "name": "other",
+                "value": "100",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 19,
+        "name": "事件等级",
+        "value": "ieventlevel",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "一般",
+                "value": "2",
+                "children": null
+            },
+            {
+                "name": "轻微",
+                "value": "1",
+                "children": null
+            },
+            {
+                "name": "致命",
+                "value": "5",
+                "children": null
+            },
+            {
+                "name": "严重",
+                "value": "4",
+                "children": null
+            },
+            {
+                "name": "重要",
+                "value": "3",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 20,
+        "name": "原始等级",
+        "value": "corilevel",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "调试：调试信息",
+                "value": "7",
+                "children": null
+            },
+            {
+                "name": "通知：一般性的正常事件",
+                "value": "6",
+                "children": null
+            },
+            {
+                "name": "出错：一般出错事件",
+                "value": "3",
+                "children": null
+            },
+            {
+                "name": "提示：重要的正常事件",
+                "value": "5",
+                "children": null
+            },
+            {
+                "name": "临界：达到临界条件",
+                "value": "2",
+                "children": null
+            },
+            {
+                "name": "警告：应立即采取应对行动",
+                "value": "1",
+                "children": null
+            },
+            {
+                "name": "预警：预警性提示事件",
+                "value": "4",
+                "children": null
+            },
+            {
+                "name": "紧急：导致系统不可用",
+                "value": "0",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 21,
+        "name": "原始类型",
+        "value": "coritype",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 22,
+        "name": "产生时间",
+        "value": "loccurtime",
+        "type": 2,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 23,
+        "name": "监控数值",
+        "value": "dmonitorvalue",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 24,
+        "name": "网络协议",
+        "value": "iprotocol",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "sat-expak",
+                "value": "64",
+                "children": null
+            },
+            {
+                "name": "tp++",
+                "value": "39",
+                "children": null
+            },
+            {
+                "name": "anyencrypt",
+                "value": "99",
+                "children": null
+            },
+            {
+                "name": "vrrp",
+                "value": "112",
+                "children": null
+            },
+            {
+                "name": "argus",
+                "value": "13",
+                "children": null
+            },
+            {
+                "name": "iatp",
+                "value": "117",
+                "children": null
+            },
+            {
+                "name": "sdrp",
+                "value": "42",
+                "children": null
+            },
+            {
+                "name": "pgm",
+                "value": "113",
+                "children": null
+            },
+            {
+                "name": "ipcv",
+                "value": "71",
+                "children": null
+            },
+            {
+                "name": "cpnx",
+                "value": "72",
+                "children": null
+            },
+            {
+                "name": "ftp",
+                "value": "139",
+                "children": null
+            },
+            {
+                "name": "netblt",
+                "value": "30",
+                "children": null
+            },
+            {
+                "name": "bbn-rcc-mon",
+                "value": "10",
+                "children": null
+            },
+            {
+                "name": "crudp",
+                "value": "127",
+                "children": null
+            },
+            {
+                "name": "secure-vmtp",
+                "value": "82",
+                "children": null
+            },
+            {
+                "name": "icmp",
+                "value": "1",
+                "children": null
+            },
+            {
+                "name": "wb-expak",
+                "value": "79",
+                "children": null
+            },
+            {
+                "name": "snp",
+                "value": "109",
+                "children": null
+            },
+            {
+                "name": "narp",
+                "value": "54",
+                "children": null
+            },
+            {
+                "name": "leaf-2",
+                "value": "26",
+                "children": null
+            },
+            {
+                "name": "ipv6-nonxt",
+                "value": "59",
+                "children": null
+            },
+            {
+                "name": "ipip",
+                "value": "94",
+                "children": null
+            },
+            {
+                "name": "experimental1",
+                "value": "253",
+                "children": null
+            },
+            {
+                "name": "qnx",
+                "value": "106",
+                "children": null
+            },
+            {
+                "name": "stp",
+                "value": "118",
+                "children": null
+            },
+            {
+                "name": "vines",
+                "value": "83",
+                "children": null
+            },
+            {
+                "name": "pvp",
+                "value": "75",
+                "children": null
+            },
+            {
+                "name": "ipv6",
+                "value": "41",
+                "children": null
+            },
+            {
+                "name": "il",
+                "value": "40",
+                "children": null
+            },
+            {
+                "name": "sat-mon",
+                "value": "69",
+                "children": null
+            },
+            {
+                "name": "scps",
+                "value": "105",
+                "children": null
+            },
+            {
+                "name": "dgp",
+                "value": "86",
+                "children": null
+            },
+            {
+                "name": "egp",
+                "value": "8",
+                "children": null
+            },
+            {
+                "name": "igmp",
+                "value": "201",
+                "children": null
+            },
+            {
+                "name": "iso-tp4",
+                "value": "29",
+                "children": null
+            },
+            {
+                "name": "anydistribfs",
+                "value": "68",
+                "children": null
+            },
+            {
+                "name": "arp",
+                "value": "255",
+                "children": null
+            },
+            {
+                "name": "irtp",
+                "value": "28",
+                "children": null
+            },
+            {
+                "name": "hmp",
+                "value": "20",
+                "children": null
+            },
+            {
+                "name": "swipe",
+                "value": "53",
+                "children": null
+            },
+            {
+                "name": "ifmp",
+                "value": "101",
+                "children": null
+            },
+            {
+                "name": "trunk-2",
+                "value": "24",
+                "children": null
+            },
+            {
+                "name": "ah",
+                "value": "51",
+                "children": null
+            },
+            {
+                "name": "mobile",
+                "value": "55",
+                "children": null
+            },
+            {
+                "name": "sctp",
+                "value": "132",
+                "children": null
+            },
+            {
+                "name": "emcon",
+                "value": "14",
+                "children": null
+            },
+            {
+                "name": "srp",
+                "value": "119",
+                "children": null
+            },
+            {
+                "name": "wsn",
+                "value": "74",
+                "children": null
+            },
+            {
+                "name": "ttp",
+                "value": "84",
+                "children": null
+            },
+            {
+                "name": "iplt",
+                "value": "129",
+                "children": null
+            },
+            {
+                "name": "xnet",
+                "value": "15",
+                "children": null
+            },
+            {
+                "name": "micp",
+                "value": "95",
+                "children": null
+            },
+            {
+                "name": "pup",
+                "value": "12",
+                "children": null
+            },
+            {
+                "name": "sscopmce",
+                "value": "128",
+                "children": null
+            },
+            {
+                "name": "ipv6-opts",
+                "value": "60",
+                "children": null
+            },
+            {
+                "name": "mtp",
+                "value": "92",
+                "children": null
+            },
+            {
+                "name": "ipv6-icmp",
+                "value": "58",
+                "children": null
+            },
+            {
+                "name": "kryptolan",
+                "value": "65",
+                "children": null
+            },
+            {
+                "name": "aris",
+                "value": "104",
+                "children": null
+            },
+            {
+                "name": "mfe-nsp",
+                "value": "31",
+                "children": null
+            },
+            {
+                "name": "anyhost",
+                "value": "61",
+                "children": null
+            },
+            {
+                "name": "visa",
+                "value": "70",
+                "children": null
+            },
+            {
+                "name": "vmtp",
+                "value": "81",
+                "children": null
+            },
+            {
+                "name": "fire",
+                "value": "125",
+                "children": null
+            },
+            {
+                "name": "experimental2",
+                "value": "254",
+                "children": null
+            },
+            {
+                "name": "iso-ip",
+                "value": "80",
+                "children": null
+            },
+            {
+                "name": "scc-sp",
+                "value": "96",
+                "children": null
+            },
+            {
+                "name": "ipcomp",
+                "value": "108",
+                "children": null
+            },
+            {
+                "name": "a/n",
+                "value": "107",
+                "children": null
+            },
+            {
+                "name": "idpr-cmtp",
+                "value": "38",
+                "children": null
+            },
+            {
+                "name": "ax.25",
+                "value": "93",
+                "children": null
+            },
+            {
+                "name": "ddx",
+                "value": "116",
+                "children": null
+            },
+            {
+                "name": "nsfnet-igp",
+                "value": "85",
+                "children": null
+            },
+            {
+                "name": "rdp",
+                "value": "27",
+                "children": null
+            },
+            {
+                "name": "leaf-1",
+                "value": "25",
+                "children": null
+            },
+            {
+                "name": "l2tp",
+                "value": "115",
+                "children": null
+            },
+            {
+                "name": "smp",
+                "value": "121",
+                "children": null
+            },
+            {
+                "name": "ipv6-route",
+                "value": "43",
+                "children": null
+            },
+            {
+                "name": "tcp",
+                "value": "6",
+                "children": null
+            },
+            {
+                "name": "idrp",
+                "value": "45",
+                "children": null
+            },
+            {
+                "name": "merit-inp",
+                "value": "32",
+                "children": null
+            },
+            {
+                "name": "sm",
+                "value": "122",
+                "children": null
+            },
+            {
+                "name": "tlsp",
+                "value": "56",
+                "children": null
+            },
+            {
+                "name": "rvd",
+                "value": "66",
+                "children": null
+            },
+            {
+                "name": "larp",
+                "value": "91",
+                "children": null
+            },
+            {
+                "name": "rsvp-e2e-ignore",
+                "value": "134",
+                "children": null
+            },
+            {
+                "name": "mobility-hdr",
+                "value": "135",
+                "children": null
+            },
+            {
+                "name": "uti",
+                "value": "120",
+                "children": null
+            },
+            {
+                "name": "isis-ipv4",
+                "value": "124",
+                "children": null
+            },
+            {
+                "name": "ptp",
+                "value": "123",
+                "children": null
+            },
+            {
+                "name": "mhrp",
+                "value": "48",
+                "children": null
+            },
+            {
+                "name": "ospfigp",
+                "value": "89",
+                "children": null
+            },
+            {
+                "name": "gmtp",
+                "value": "100",
+                "children": null
+            },
+            {
+                "name": "ddp",
+                "value": "37",
+                "children": null
+            },
+            {
+                "name": "esp",
+                "value": "50",
+                "children": null
+            },
+            {
+                "name": "st",
+                "value": "5",
+                "children": null
+            },
+            {
+                "name": "bna",
+                "value": "49",
+                "children": null
+            },
+            {
+                "name": "xns-idp",
+                "value": "2",
+                "children": null
+            },
+            {
+                "name": "tcf",
+                "value": "87",
+                "children": null
+            },
+            {
+                "name": "hopopt",
+                "value": "0",
+                "children": null
+            },
+            {
+                "name": "sprite-rpc",
+                "value": "90",
+                "children": null
+            },
+            {
+                "name": "gre",
+                "value": "47",
+                "children": null
+            },
+            {
+                "name": "udp",
+                "value": "17",
+                "children": null
+            },
+            {
+                "name": "br-sat-mon",
+                "value": "76",
+                "children": null
+            },
+            {
+                "name": "crtp",
+                "value": "126",
+                "children": null
+            },
+            {
+                "name": "igp",
+                "value": "9",
+                "children": null
+            },
+            {
+                "name": "skip",
+                "value": "57",
+                "children": null
+            },
+            {
+                "name": "compaq-peer",
+                "value": "110",
+                "children": null
+            },
+            {
+                "name": "i-nlsp",
+                "value": "52",
+                "children": null
+            },
+            {
+                "name": "anylocalnet",
+                "value": "63",
+                "children": null
+            },
+            {
+                "name": "ippc",
+                "value": "67",
+                "children": null
+            },
+            {
+                "name": "xtp",
+                "value": "36",
+                "children": null
+            },
+            {
+                "name": "ggp",
+                "value": "3",
+                "children": null
+            },
+            {
+                "name": "cftp",
+                "value": "62",
+                "children": null
+            },
+            {
+                "name": "sun-nd",
+                "value": "77",
+                "children": null
+            },
+            {
+                "name": "ip",
+                "value": "4",
+                "children": null
+            },
+            {
+                "name": "etherip",
+                "value": "97",
+                "children": null
+            },
+            {
+                "name": "rsvp",
+                "value": "46",
+                "children": null
+            },
+            {
+                "name": "mpls-in-ip",
+                "value": "137",
+                "children": null
+            },
+            {
+                "name": "unknown",
+                "value": "-1",
+                "children": null
+            },
+            {
+                "name": "ipv6-frag",
+                "value": "44",
+                "children": null
+            },
+            {
+                "name": "fc",
+                "value": "133",
+                "children": null
+            },
+            {
+                "name": "udplite",
+                "value": "136",
+                "children": null
+            },
+            {
+                "name": "wb-mon",
+                "value": "78",
+                "children": null
+            },
+            {
+                "name": "prm",
+                "value": "21",
+                "children": null
+            },
+            {
+                "name": "trunk-1",
+                "value": "23",
+                "children": null
+            },
+            {
+                "name": "ipx-in-ip",
+                "value": "111",
+                "children": null
+            },
+            {
+                "name": "encap",
+                "value": "98",
+                "children": null
+            },
+            {
+                "name": "cphb",
+                "value": "73",
+                "children": null
+            },
+            {
+                "name": "mux",
+                "value": "18",
+                "children": null
+            },
+            {
+                "name": "3pc",
+                "value": "34",
+                "children": null
+            },
+            {
+                "name": "cbt",
+                "value": "7",
+                "children": null
+            },
+            {
+                "name": "dccp",
+                "value": "33",
+                "children": null
+            },
+            {
+                "name": "IMAP",
+                "value": "220",
+                "children": null
+            },
+            {
+                "name": "sps",
+                "value": "130",
+                "children": null
+            },
+            {
+                "name": "idpr",
+                "value": "35",
+                "children": null
+            },
+            {
+                "name": "pipe",
+                "value": "131",
+                "children": null
+            },
+            {
+                "name": "any0hop",
+                "value": "114",
+                "children": null
+            },
+            {
+                "name": "nvp-ii",
+                "value": "11",
+                "children": null
+            },
+            {
+                "name": "eigrp",
+                "value": "88",
+                "children": null
+            },
+            {
+                "name": "chaos",
+                "value": "16",
+                "children": null
+            },
+            {
+                "name": "dcn-meas",
+                "value": "19",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 25,
+        "name": "网络应用协议",
+        "value": "iappprotocol",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "smtp",
+                "value": "25",
+                "children": null
+            },
+            {
+                "name": "X11",
+                "value": "6000",
+                "children": null
+            },
+            {
+                "name": "DHCP",
+                "value": "68",
+                "children": null
+            },
+            {
+                "name": "pop3",
+                "value": "110",
+                "children": null
+            },
+            {
+                "name": "printer",
+                "value": "515",
+                "children": null
+            },
+            {
+                "name": "sun-rpc",
+                "value": "111",
+                "children": null
+            },
+            {
+                "name": "https",
+                "value": "443",
+                "children": null
+            },
+            {
+                "name": "smb",
+                "value": "445",
+                "children": null
+            },
+            {
+                "name": "snmp",
+                "value": "161",
+                "children": null
+            },
+            {
+                "name": "mysql",
+                "value": "3306",
+                "children": null
+            },
+            {
+                "name": "MMS",
+                "value": "1755",
+                "children": null
+            },
+            {
+                "name": "telnet",
+                "value": "23",
+                "children": null
+            },
+            {
+                "name": "IMAP",
+                "value": "143",
+                "children": null
+            },
+            {
+                "name": "echo",
+                "value": "7",
+                "children": null
+            },
+            {
+                "name": "bootps",
+                "value": "67",
+                "children": null
+            },
+            {
+                "name": "oracle",
+                "value": "1521",
+                "children": null
+            },
+            {
+                "name": "domain",
+                "value": "53",
+                "children": null
+            },
+            {
+                "name": "unknown",
+                "value": "-1",
+                "children": null
+            },
+            {
+                "name": "RSTP",
+                "value": "554",
+                "children": null
+            },
+            {
+                "name": "netbios-ns",
+                "value": "137",
+                "children": null
+            },
+            {
+                "name": "RDP",
+                "value": "3389",
+                "children": null
+            },
+            {
+                "name": "icmp",
+                "value": "1",
+                "children": null
+            },
+            {
+                "name": "imap3",
+                "value": "220",
+                "children": null
+            },
+            {
+                "name": "UDP",
+                "value": "2",
+                "children": null
+            },
+            {
+                "name": "ups",
+                "value": "401",
+                "children": null
+            },
+            {
+                "name": "mssql server",
+                "value": "1443",
+                "children": null
+            },
+            {
+                "name": "ftp",
+                "value": "21",
+                "children": null
+            },
+            {
+                "name": "ldap",
+                "value": "389",
+                "children": null
+            },
+            {
+                "name": "snmp-traps",
+                "value": "162",
+                "children": null
+            },
+            {
+                "name": "http",
+                "value": "80",
+                "children": null
+            },
+            {
+                "name": "rlogin",
+                "value": "513",
+                "children": null
+            },
+            {
+                "name": "finger",
+                "value": "79",
+                "children": null
+            },
+            {
+                "name": "SSH",
+                "value": "22",
+                "children": null
+            },
+            {
+                "name": "syslog",
+                "value": "514",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 26,
+        "name": "源转换IP地址",
+        "value": "csrctip",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 27,
+        "name": "源名称",
+        "value": "csrcname",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 28,
+        "name": "源MAC地址",
+        "value": "csrcmac",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 29,
+        "name": "源转换端口",
+        "value": "isrctport",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 30,
+        "name": "目的名称",
+        "value": "cdstname",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 31,
+        "name": "目的MAC地址",
+        "value": "cdstmac",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 32,
+        "name": "目的转换IP地址",
+        "value": "cdsttip",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 33,
+        "name": "目的转换端口",
+        "value": "idsttport",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 34,
+        "name": "设备地址",
+        "value": "cdevip",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 35,
+        "name": "设备名称",
+        "value": "cdevname",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 36,
+        "name": "设备类型",
+        "value": "cdevtype",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "/虚拟化设备/Hyper-V",
+                "value": "/virtual/Hyper-V",
+                "children": null
+            },
+            {
+                "name": "/数据库/神舟通用",
+                "value": "/database/Shentong",
+                "children": null
+            },
+            {
+                "name": "/虚拟化设备/Xen",
+                "value": "/virtual/Xen",
+                "children": null
+            },
+            {
+                "name": "Cinder",
+                "value": "/cloud/cinder",
+                "children": null
+            },
+            {
+                "name": "/openstack/Neutron",
+                "value": "/openstack/Neutron",
+                "children": null
+            },
+            {
+                "name": "威胁检测",
+                "value": "/security/apt",
+                "children": null
+            },
+            {
+                "name": "/中间件/Apache",
+                "value": "/middleware/Apache",
+                "children": null
+            },
+            {
+                "name": "Keystone",
+                "value": "/cloud/keystone",
+                "children": null
+            },
+            {
+                "name": "/安全设备/流量检测设备",
+                "value": "/security/Detector",
+                "children": null
+            },
+            {
+                "name": "/主机/文件系统",
+                "value": "/server/fileSystem",
+                "children": null
+            },
+            {
+                "name": "/数据库/Cassandra",
+                "value": "/database/Cassandra",
+                "children": null
+            },
+            {
+                "name": "/数据库/MySQL",
+                "value": "/database/Mysql",
+                "children": null
+            },
+            {
+                "name": "/安全设备/入侵防御",
+                "value": "/security/IPS",
+                "children": null
+            },
+            {
+                "name": "OpenBSD",
+                "value": "/server/openbsd",
+                "children": null
+            },
+            {
+                "name": "远程控制器",
+                "value": "/other/remotecontroller",
+                "children": null
+            },
+            {
+                "name": "/大数据/Hadoop",
+                "value": "/bigdata/Hadoop",
+                "children": null
+            },
+            {
+                "name": "/数据库/PostgreSQL",
+                "value": "/database/PostgreSQL",
+                "children": null
+            },
+            {
+                "name": "/其它设备和系统",
+                "value": "/otherdev",
+                "children": null
+            },
+            {
+                "name": "/主机/普华",
+                "value": "/server/waterhouse",
+                "children": null
+            },
+            {
+                "name": "/安全设备/Web应用安全网关",
+                "value": "/security/WAF",
+                "children": null
+            },
+            {
+                "name": "/数据库/人大金仓",
+                "value": "/database/Kingbase",
+                "children": null
+            },
+            {
+                "name": "/机房设备",
+                "value": "/phy",
+                "children": null
+            },
+            {
+                "name": "/安全设备/上网行为审计",
+                "value": "/security/IBA",
+                "children": null
+            },
+            {
+                "name": "/主机/Windows",
+                "value": "/server/Windows",
+                "children": null
+            },
+            {
+                "name": "/机房设备/环境",
+                "value": "/phy/Env",
+                "children": null
+            },
+            {
+                "name": "多媒体",
+                "value": "/other/media",
+                "children": null
+            },
+            {
+                "name": "/应用系统/WebServer",
+                "value": "/appserver/Webserver",
+                "children": null
+            },
+            {
+                "name": "终端设备",
+                "value": "/other/terminal",
+                "children": null
+            },
+            {
+                "name": "/数据库/Oracle",
+                "value": "/database/Oracle",
+                "children": null
+            },
+            {
+                "name": "/主机/中标麒麟",
+                "value": "/server/Neokylin",
+                "children": null
+            },
+            {
+                "name": "Nova",
+                "value": "/cloud/nova",
+                "children": null
+            },
+            {
+                "name": "/安全设备/数据库审计",
+                "value": "/security/DBA",
+                "children": null
+            },
+            {
+                "name": "桥接器",
+                "value": "/network/bridge",
+                "children": null
+            },
+            {
+                "name": "Trove",
+                "value": "/cloud/trove",
+                "children": null
+            },
+            {
+                "name": "/openstack/Dashboard",
+                "value": "/openstack/Dashboard",
+                "children": null
+            },
+            {
+                "name": "/安全设备",
+                "value": "/security",
+                "children": null
+            },
+            {
+                "name": "/中间件/TongLinkQ",
+                "value": "/middleware/Tonglinkq",
+                "children": null
+            },
+            {
+                "name": "/安全设备/网闸",
+                "value": "/security/GAP",
+                "children": null
+            },
+            {
+                "name": "/中间件",
+                "value": "/middleware",
+                "children": null
+            },
+            {
+                "name": "/openstack/Nova",
+                "value": "/openstack/Nova",
+                "children": null
+            },
+            {
+                "name": "/其它",
+                "value": "/other",
+                "children": null
+            },
+            {
+                "name": "/主机/AIX",
+                "value": "/server/AIX",
+                "children": null
+            },
+            {
+                "name": "Symbian",
+                "value": "/mobile/symbian",
+                "children": null
+            },
+            {
+                "name": "/存储设备/Netapp",
+                "value": "/storage/Netapp",
+                "children": null
+            },
+            {
+                "name": "/安全设备/网络行为分析",
+                "value": "/security/NBA",
+                "children": null
+            },
+            {
+                "name": "/中间件/Nginx",
+                "value": "/middleware/Nginx",
+                "children": null
+            },
+            {
+                "name": "/业务系统",
+                "value": "/business",
+                "children": null
+            },
+            {
+                "name": "/数据库/武汉达梦",
+                "value": "/database/Dameng",
+                "children": null
+            },
+            {
+                "name": "/主机/HP-UX",
+                "value": "/server/HP-UX",
+                "children": null
+            },
+            {
+                "name": "/存储设备/磁盘阵列",
+                "value": "/storage/RAID",
+                "children": null
+            },
+            {
+                "name": "/中间件/Resin",
+                "value": "/middleware/Resin",
+                "children": null
+            },
+            {
+                "name": "/主机/Linux",
+                "value": "/server/Linux",
+                "children": null
+            },
+            {
+                "name": "/安全设备/入侵检测",
+                "value": "/security/IDS",
+                "children": null
+            },
+            {
+                "name": "/应用系统/应用交付系统",
+                "value": "/appserver/ADC",
+                "children": null
+            },
+            {
+                "name": "/数据库/Hive",
+                "value": "/database/Hive",
+                "children": null
+            },
+            {
+                "name": "/应用系统/ERP",
+                "value": "/appserver/ERP",
+                "children": null
+            },
+            {
+                "name": "音视频设备",
+                "value": "/other/audiovideo",
+                "children": null
+            },
+            {
+                "name": "/网络设备/路由器",
+                "value": "/network/Router",
+                "children": null
+            },
+            {
+                "name": "/网络设备/负载均衡",
+                "value": "/network/LB",
+                "children": null
+            },
+            {
+                "name": "/openstack/Manager",
+                "value": "/openstack/Manager",
+                "children": null
+            },
+            {
+                "name": "/数据库",
+                "value": "/database",
+                "children": null
+            },
+            {
+                "name": "/安全设备/数据脱敏系统",
+                "value": "/security/DM",
+                "children": null
+            },
+            {
+                "name": "网络摄像机",
+                "value": "/other/camera",
+                "children": null
+            },
+            {
+                "name": "Ceilometer",
+                "value": "/cloud/ceilometer",
+                "children": null
+            },
+            {
+                "name": "虚拟化设备/KVM/宿主机",
+                "value": "/virtual/KVM/HOST",
+                "children": null
+            },
+            {
+                "name": "/大数据/Flume",
+                "value": "/bigdata/Flume",
+                "children": null
+            },
+            {
+                "name": "光盘刻录机",
+                "value": "/other/burner",
+                "children": null
+            },
+            {
+                "name": "FusionCompute",
+                "value": "/virtual/fusioncompute",
+                "children": null
+            },
+            {
+                "name": "语音视频监控器",
+                "value": "/other/webcam",
+                "children": null
+            },
+            {
+                "name": "代理服务器",
+                "value": "/appserver/proxy",
+                "children": null
+            },
+            {
+                "name": "其他主机",
+                "value": "/server/computer",
+                "children": null
+            },
+            {
+                "name": "/网络设备/交换机",
+                "value": "/network/Switch",
+                "children": null
+            },
+            {
+                "name": "Docker",
+                "value": "/virtual/docker",
+                "children": null
+            },
+            {
+                "name": "/中间件/IIS",
+                "value": "/middleware/IIS",
+                "children": null
+            },
+            {
+                "name": "/数据库/HBase",
+                "value": "/database/HBase",
+                "children": null
+            },
+            {
+                "name": "银河麒麟",
+                "value": "/server/yhkylin",
+                "children": null
+            },
+            {
+                "name": "/中间件/JBoss",
+                "value": "/middleware/Jboss",
+                "children": null
+            },
+            {
+                "name": "/openstack/Keystone",
+                "value": "/openstack/Keystone",
+                "children": null
+            },
+            {
+                "name": "/中间件/ActiveMQ",
+                "value": "/middleware/Activemq",
+                "children": null
+            },
+            {
+                "name": "MQ",
+                "value": "/middleware/mq",
+                "children": null
+            },
+            {
+                "name": "/工控设备",
+                "value": "/gongKong",
+                "children": null
+            },
+            {
+                "name": "/大数据/Zookeeper",
+                "value": "/bigdata/Zookeeper",
+                "children": null
+            },
+            {
+                "name": "电源管理器",
+                "value": "/other/powermgt",
+                "children": null
+            },
+            {
+                "name": "/大数据/Elasticsearch",
+                "value": "/bigdata/ES",
+                "children": null
+            },
+            {
+                "name": "VoIP设备",
+                "value": "/other/voip",
+                "children": null
+            },
+            {
+                "name": "/存储设备/SAN",
+                "value": "/storage/SAN",
+                "children": null
+            },
+            {
+                "name": "/大数据/Hive",
+                "value": "/bigdata/Hive",
+                "children": null
+            },
+            {
+                "name": "网络打印机",
+                "value": "/other/printer",
+                "children": null
+            },
+            {
+                "name": "DOS",
+                "value": "/server/dos",
+                "children": null
+            },
+            {
+                "name": "/网络设备",
+                "value": "/network",
+                "children": null
+            },
+            {
+                "name": "/虚拟化设备/ESX(i)",
+                "value": "/virtual/ESXi",
+                "children": null
+            },
+            {
+                "name": "/安全设备/蜜罐系统",
+                "value": "/security/Honeypot",
+                "children": null
+            },
+            {
+                "name": "DNS",
+                "value": "/appserver/dns",
+                "children": null
+            },
+            {
+                "name": "/中间件/WebLogic",
+                "value": "/middleware/Weblogic",
+                "children": null
+            },
+            {
+                "name": "/安全设备/防病毒系统",
+                "value": "/security/AV",
+                "children": null
+            },
+            {
+                "name": "/虚拟化设备/虚拟主机",
+                "value": "/virtual/vm",
+                "children": null
+            },
+            {
+                "name": "Glance",
+                "value": "/cloud/glance",
+                "children": null
+            },
+            {
+                "name": "威胁情报系统",
+                "value": "/security/tip",
+                "children": null
+            },
+            {
+                "name": "/主机/Solaris",
+                "value": "/server/Solaris",
+                "children": null
+            },
+            {
+                "name": "WEB主机",
+                "value": "/webhost",
+                "children": null
+            },
+            {
+                "name": "/数据库/南大通用",
+                "value": "/database/Gbase",
+                "children": null
+            },
+            {
+                "name": "Windows_Mobile",
+                "value": "/mobile/windowsmobile",
+                "children": null
+            },
+            {
+                "name": "/大数据/Spark",
+                "value": "/bigdata/Spark",
+                "children": null
+            },
+            {
+                "name": "/中间件/Bind",
+                "value": "/middleware/Bind",
+                "children": null
+            },
+            {
+                "name": "/应用系统/邮件",
+                "value": "/appserver/EMAIL",
+                "children": null
+            },
+            {
+                "name": "Unix",
+                "value": "/server/unix",
+                "children": null
+            },
+            {
+                "name": "FusionManager",
+                "value": "/virtual/fusionmanager",
+                "children": null
+            },
+            {
+                "name": "iOS",
+                "value": "/mobile/ios",
+                "children": null
+            },
+            {
+                "name": "游戏控制器",
+                "value": "/other/gameconsole",
+                "children": null
+            },
+            {
+                "name": "/安全设备/沙箱系统",
+                "value": "/security/Sandbox",
+                "children": null
+            },
+            {
+                "name": "/安全设备/数据库防火墙",
+                "value": "/security/u_00020",
+                "children": null
+            },
+            {
+                "name": "/存储设备/EMC",
+                "value": "/storage/EMC",
+                "children": null
+            },
+            {
+                "name": "/虚拟化设备/FusionSphere",
+                "value": "/virtual/FusionSphere",
+                "children": null
+            },
+            {
+                "name": "/安全设备/防火墙",
+                "value": "/security/FW",
+                "children": null
+            },
+            {
+                "name": "/中间件/WebSphere",
+                "value": "/middleware/Websphere",
+                "children": null
+            },
+            {
+                "name": "/中间件/Tong Web",
+                "value": "/middleware/Tongweb",
+                "children": null
+            },
+            {
+                "name": "/安全设备/安全管理平台",
+                "value": "/security/SOC",
+                "children": null
+            },
+            {
+                "name": "/大数据/Hbase",
+                "value": "/bigdata/Hbase",
+                "children": null
+            },
+            {
+                "name": "Dashboard",
+                "value": "/cloud/dashboard",
+                "children": null
+            },
+            {
+                "name": "Heat",
+                "value": "/cloud/heat",
+                "children": null
+            },
+            {
+                "name": "/安全设备/恶意代码检测",
+                "value": "/security/MDS",
+                "children": null
+            },
+            {
+                "name": "未知",
+                "value": "/other/unknown",
+                "children": null
+            },
+            {
+                "name": "FreeBSD",
+                "value": "/server/freebsd",
+                "children": null
+            },
+            {
+                "name": "/大数据/Storm",
+                "value": "/bigdata/Storm",
+                "children": null
+            },
+            {
+                "name": "凝思磐石",
+                "value": "/server/rocky",
+                "children": null
+            },
+            {
+                "name": "数据中心",
+                "value": "/other/datacenter",
+                "children": null
+            },
+            {
+                "name": "/大数据/Yarn",
+                "value": "/bigdata/Yarn",
+                "children": null
+            },
+            {
+                "name": "/安全设备/安全防护网关",
+                "value": "/security/UTM",
+                "children": null
+            },
+            {
+                "name": "/虚拟化设备/KVM/VM",
+                "value": "/virtual/KVM/VM",
+                "children": null
+            },
+            {
+                "name": "/存储设备",
+                "value": "/storage",
+                "children": null
+            },
+            {
+                "name": "/数据库/Informix",
+                "value": "/database/Informix",
+                "children": null
+            },
+            {
+                "name": "/中间件/Tuxedo",
+                "value": "/middleware/Tuxedo",
+                "children": null
+            },
+            {
+                "name": "/安全设备/安全审计",
+                "value": "/security/SA",
+                "children": null
+            },
+            {
+                "name": "/其它设备和系统/网络打印机",
+                "value": "/otherdev/Printer",
+                "children": null
+            },
+            {
+                "name": "/存储设备/宏杉存储",
+                "value": "/storage/HONGSHAN",
+                "children": null
+            },
+            {
+                "name": "移动设备",
+                "value": "/mobile",
+                "children": null
+            },
+            {
+                "name": "/安全设备/网页防篡改",
+                "value": "/security/WTP",
+                "children": null
+            },
+            {
+                "name": "/安全设备/日志审计",
+                "value": "/security/LA",
+                "children": null
+            },
+            {
+                "name": "/安全设备/网络安全态势感知",
+                "value": "/security/NTA",
+                "children": null
+            },
+            {
+                "name": "/虚拟化设备",
+                "value": "/virtual",
+                "children": null
+            },
+            {
+                "name": "Mac",
+                "value": "/server/mac",
+                "children": null
+            },
+            {
+                "name": "/大数据/Impala",
+                "value": "/bigdata/Impala",
+                "children": null
+            },
+            {
+                "name": "/虚拟化设备/vCenter",
+                "value": "/virtual/vCenter",
+                "children": null
+            },
+            {
+                "name": "/数据库/Sybase",
+                "value": "/database/Sybase",
+                "children": null
+            },
+            {
+                "name": "/安全设备/堡垒机",
+                "value": "/security/Bastion",
+                "children": null
+            },
+            {
+                "name": "/中间件/Tomcat",
+                "value": "/middleware/Tomcat",
+                "children": null
+            },
+            {
+                "name": "/安全设备/数据防泄密系统",
+                "value": "/security/DLP",
+                "children": null
+            },
+            {
+                "name": "Android",
+                "value": "/mobile/android",
+                "children": null
+            },
+            {
+                "name": "/安全设备/邮件安全网关",
+                "value": "/security/SEG",
+                "children": null
+            },
+            {
+                "name": "/安全设备/流量清洗设备",
+                "value": "/security/Guard",
+                "children": null
+            },
+            {
+                "name": "/存储设备/NAS",
+                "value": "/storage/NAS",
+                "children": null
+            },
+            {
+                "name": "/虚拟化设备/CloudCell",
+                "value": "/virtual/CloudCell",
+                "children": null
+            },
+            {
+                "name": "/openstack",
+                "value": "/openstack",
+                "children": null
+            },
+            {
+                "name": "/安全设备/身份认证",
+                "value": "/security/PKI",
+                "children": null
+            },
+            {
+                "name": "IHS",
+                "value": "/middleware/ihs",
+                "children": null
+            },
+            {
+                "name": "BlackBerry",
+                "value": "/mobile/blackberry",
+                "children": null
+            },
+            {
+                "name": "/中间件/RabbitMq",
+                "value": "/middleware/Rabbitmq",
+                "children": null
+            },
+            {
+                "name": "/安全设备/终端安全管理",
+                "value": "/security/Terminal",
+                "children": null
+            },
+            {
+                "name": "/大数据/Hdfs",
+                "value": "/bigdata/Hdfs",
+                "children": null
+            },
+            {
+                "name": "/应用系统/OA",
+                "value": "/appserver/OA",
+                "children": null
+            },
+            {
+                "name": "/openstack/Cinder",
+                "value": "/openstack/Cinder",
+                "children": null
+            },
+            {
+                "name": "/安全设备/应用安全测试",
+                "value": "/security/AST",
+                "children": null
+            },
+            {
+                "name": "/安全设备/漏洞扫描",
+                "value": "/security/Vulns",
+                "children": null
+            },
+            {
+                "name": "/机房设备/安防",
+                "value": "/phy/SafeGuard",
+                "children": null
+            },
+            {
+                "name": "/虚拟化设备/XenServer",
+                "value": "/virtual/Xenserver",
+                "children": null
+            },
+            {
+                "name": "Swift",
+                "value": "/cloud/swift",
+                "children": null
+            },
+            {
+                "name": "/虚拟化设备/KVM",
+                "value": "/virtual/KVM",
+                "children": null
+            },
+            {
+                "name": "/大数据/Kafka",
+                "value": "/bigdata/Kafka",
+                "children": null
+            },
+            {
+                "name": "云计算",
+                "value": "/cloud",
+                "children": null
+            },
+            {
+                "name": "Neutron",
+                "value": "/cloud/neutron",
+                "children": null
+            },
+            {
+                "name": "OpenStack",
+                "value": "/cloud/openstack",
+                "children": null
+            },
+            {
+                "name": "/中间件/Domino",
+                "value": "/middleware/Domino",
+                "children": null
+            },
+            {
+                "name": "/网络设备/WLAN",
+                "value": "/network/WLAN",
+                "children": null
+            },
+            {
+                "name": "/数据库/DB2",
+                "value": "/database/DB2",
+                "children": null
+            },
+            {
+                "name": "/主机/凝思磐石",
+                "value": "/server/Meditation",
+                "children": null
+            },
+            {
+                "name": "考勤机",
+                "value": "/other/attendance",
+                "children": null
+            },
+            {
+                "name": "/网络设备/Hub",
+                "value": "/network/Hub",
+                "children": null
+            },
+            {
+                "name": "/应用系统",
+                "value": "/appserver",
+                "children": null
+            },
+            {
+                "name": "电话交换机",
+                "value": "/other/switchboard",
+                "children": null
+            },
+            {
+                "name": "/大数据",
+                "value": "/bigdata",
+                "children": null
+            },
+            {
+                "name": "/主机",
+                "value": "/server",
+                "children": null
+            },
+            {
+                "name": "/中间件/webspheremq",
+                "value": "/middleware/Webspheremq",
+                "children": null
+            },
+            {
+                "name": "/机房设备/动力",
+                "value": "/phy/Power",
+                "children": null
+            },
+            {
+                "name": "/工控设备/赫斯曼交换机",
+                "value": "/gongKong/Hirschmann",
+                "children": null
+            },
+            {
+                "name": "/数据库/SQLServer",
+                "value": "/database/Sqlserver",
+                "children": null
+            },
+            {
+                "name": "/安全设备/配置核查",
+                "value": "/security/CVS",
+                "children": null
+            },
+            {
+                "name": "Palmwebos",
+                "value": "/mobile/palmwebos",
+                "children": null
+            },
+            {
+                "name": "/安全设备/VPN",
+                "value": "/security/VPN",
+                "children": null
+            },
+            {
+                "name": "/数据库/MongoDB",
+                "value": "/database/MongoDB",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 37,
+        "name": "程序进程",
+        "value": "cprogram",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 38,
+        "name": "采集器IP地址",
+        "value": "ccollectorip",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 39,
+        "name": "请求内容",
+        "value": "crequestmsg",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 40,
+        "name": "原始消息",
+        "value": "ceventmsg",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "Fulltext",
+                "text": "关键字"
+            },
+            {
+                "value": "RegExp",
+                "text": "正则"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 41,
+        "name": "动作",
+        "value": "caction",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "命中",
+                "value": "hit",
+                "children": null
+            },
+            {
+                "name": "捕获",
+                "value": "capture",
+                "children": null
+            },
+            {
+                "name": "无动作",
+                "value": "na",
+                "children": null
+            },
+            {
+                "name": "查杀",
+                "value": "avira",
+                "children": null
+            },
+            {
+                "name": "修复",
+                "value": "fixes",
+                "children": null
+            },
+            {
+                "name": "清除",
+                "value": "clear",
+                "children": null
+            },
+            {
+                "name": "允许",
+                "value": "允许",
+                "children": null
+            },
+            {
+                "name": "生成日志",
+                "value": "logging",
+                "children": null
+            },
+            {
+                "name": "检测",
+                "value": "detection",
+                "children": null
+            },
+            {
+                "name": "监控",
+                "value": "monitor",
+                "children": null
+            },
+            {
+                "name": "重定向",
+                "value": "redirect",
+                "children": null
+            },
+            {
+                "name": "发现",
+                "value": "found",
+                "children": null
+            },
+            {
+                "name": "丢弃",
+                "value": "drop",
+                "children": null
+            },
+            {
+                "name": "隔离",
+                "value": "isolation",
+                "children": null
+            },
+            {
+                "name": "下线",
+                "value": "offline",
+                "children": null
+            },
+            {
+                "name": "允许",
+                "value": "permit",
+                "children": null
+            },
+            {
+                "name": "断开",
+                "value": "disconnect",
+                "children": null
+            },
+            {
+                "name": "告警",
+                "value": "alert",
+                "children": null
+            },
+            {
+                "name": "上线",
+                "value": "online",
+                "children": null
+            },
+            {
+                "name": "记录",
+                "value": "log",
+                "children": null
+            },
+            {
+                "name": "拒绝",
+                "value": "deny",
+                "children": null
+            },
+            {
+                "name": "删除",
+                "value": "delete",
+                "children": null
+            },
+            {
+                "name": "限制",
+                "value": "limit",
+                "children": null
+            },
+            {
+                "name": "关闭",
+                "value": "close",
+                "children": null
+            },
+            {
+                "name": "忽略",
+                "value": "ignore",
+                "children": null
+            },
+            {
+                "name": "阻断",
+                "value": "block",
+                "children": null
+            },
+            {
+                "name": "重置",
+                "value": "reset",
+                "children": null
+            },
+            {
+                "name": "未定义",
+                "value": "-999",
+                "children": null
+            },
+            {
+                "name": "重启",
+                "value": "reboot",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 56,
+        "name": "设备厂商",
+        "value": "cvendor",
+        "type": 3,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": [
+            {
+                "name": "安达通",
+                "value": "atd",
+                "children": null
+            },
+            {
+                "name": "汉邦",
+                "value": "hb",
+                "children": null
+            },
+            {
+                "name": "openstack",
+                "value": "openstack",
+                "children": null
+            },
+            {
+                "name": "优科",
+                "value": "优科",
+                "children": null
+            },
+            {
+                "name": "帕拉迪",
+                "value": "帕拉迪",
+                "children": null
+            },
+            {
+                "name": "奇安信",
+                "value": "qax",
+                "children": null
+            },
+            {
+                "name": "PaloAlto",
+                "value": "paloalto",
+                "children": null
+            },
+            {
+                "name": "浪潮",
+                "value": "inspur",
+                "children": null
+            },
+            {
+                "name": "信安世纪",
+                "value": "infosec",
+                "children": null
+            },
+            {
+                "name": "华为",
+                "value": "huawei",
+                "children": null
+            },
+            {
+                "name": "云天安全",
+                "value": "HTD",
+                "children": null
+            },
+            {
+                "name": "Apache",
+                "value": "apache",
+                "children": null
+            },
+            {
+                "name": "东软",
+                "value": "neteye",
+                "children": null
+            },
+            {
+                "name": "中创软件",
+                "value": "inforguard",
+                "children": null
+            },
+            {
+                "name": "IBM",
+                "value": "ibm",
+                "children": null
+            },
+            {
+                "name": "TP-Link",
+                "value": "TPlink",
+                "children": null
+            },
+            {
+                "name": "格尔",
+                "value": "koal",
+                "children": null
+            },
+            {
+                "name": "六方云",
+                "value": "六方云",
+                "children": null
+            },
+            {
+                "name": "天泰",
+                "value": "titan",
+                "children": null
+            },
+            {
+                "name": "立思辰",
+                "value": "lanxum",
+                "children": null
+            },
+            {
+                "name": "金山",
+                "value": "金山",
+                "children": null
+            },
+            {
+                "name": "Veritas",
+                "value": "netbackup",
+                "children": null
+            },
+            {
+                "name": "Colasoft",
+                "value": "Colasoft",
+                "children": null
+            },
+            {
+                "name": "江南科友",
+                "value": "江南科友",
+                "children": null
+            },
+            {
+                "name": "网御星云",
+                "value": "leadsec",
+                "children": null
+            },
+            {
+                "name": "观安",
+                "value": "观安",
+                "children": null
+            },
+            {
+                "name": "瑞星",
+                "value": "rising",
+                "children": null
+            },
+            {
+                "name": "多芬诺",
+                "value": "多芬诺",
+                "children": null
+            },
+            {
+                "name": "NGINX",
+                "value": "nginx",
+                "children": null
+            },
+            {
+                "name": "未定义",
+                "value": "-999",
+                "children": null
+            },
+            {
+                "name": "安氏领信",
+                "value": "linktrust",
+                "children": null
+            },
+            {
+                "name": "长扬科技",
+                "value": "INA",
+                "children": null
+            },
+            {
+                "name": "奇安信网康",
+                "value": "netentsec",
+                "children": null
+            },
+            {
+                "name": "微软",
+                "value": "micsoft",
+                "children": null
+            },
+            {
+                "name": "海峡",
+                "value": "海峡",
+                "children": null
+            },
+            {
+                "name": "瑞数科技",
+                "value": "riversec",
+                "children": null
+            },
+            {
+                "name": "迈普",
+                "value": "MAPU",
+                "children": null
+            },
+            {
+                "name": "龙寻",
+                "value": "龙寻",
+                "children": null
+            },
+            {
+                "name": "戴尔",
+                "value": "dell",
+                "children": null
+            },
+            {
+                "name": "网宿",
+                "value": "网宿",
+                "children": null
+            },
+            {
+                "name": "启明星辰",
+                "value": "venus",
+                "children": null
+            },
+            {
+                "name": "江南信安",
+                "value": "江南信安",
+                "children": null
+            },
+            {
+                "name": "卓越",
+                "value": "卓越",
+                "children": null
+            },
+            {
+                "name": "Imperva",
+                "value": "imperva",
+                "children": null
+            },
+            {
+                "name": "中新金盾",
+                "value": "zxfw",
+                "children": null
+            },
+            {
+                "name": "Checkpoint",
+                "value": "Checkpoint",
+                "children": null
+            },
+            {
+                "name": "极地",
+                "value": "极地",
+                "children": null
+            },
+            {
+                "name": "Radware",
+                "value": "Radware",
+                "children": null
+            },
+            {
+                "name": "江南科友",
+                "value": "keyou",
+                "children": null
+            },
+            {
+                "name": "安博通",
+                "value": "abt",
+                "children": null
+            },
+            {
+                "name": "华信恒泰",
+                "value": "华信恒泰",
+                "children": null
+            },
+            {
+                "name": "安信华",
+                "value": "anchiva",
+                "children": null
+            },
+            {
+                "name": "TSZSC",
+                "value": "360",
+                "children": null
+            },
+            {
+                "name": "天融信",
+                "value": "topsec",
+                "children": null
+            },
+            {
+                "name": "安盟",
+                "value": "anmeng",
+                "children": null
+            },
+            {
+                "name": "施耐德",
+                "value": "施耐德",
+                "children": null
+            },
+            {
+                "name": "圣博润",
+                "value": "sbr",
+                "children": null
+            },
+            {
+                "name": "科来",
+                "value": "科来",
+                "children": null
+            },
+            {
+                "name": "安全狗",
+                "value": "safdog",
+                "children": null
+            },
+            {
+                "name": "阿姆瑞特",
+                "value": "amaranten",
+                "children": null
+            },
+            {
+                "name": "缔安科技",
+                "value": "缔安科技",
+                "children": null
+            },
+            {
+                "name": "安达通",
+                "value": "adt",
+                "children": null
+            },
+            {
+                "name": "安恒信息",
+                "value": "dbappsec",
+                "children": null
+            },
+            {
+                "name": "吉大正元",
+                "value": "jit",
+                "children": null
+            },
+            {
+                "name": "惠普",
+                "value": "hp",
+                "children": null
+            },
+            {
+                "name": "青藤云",
+                "value": "青藤云",
+                "children": null
+            },
+            {
+                "name": "歌华",
+                "value": "歌华",
+                "children": null
+            },
+            {
+                "name": "盛邦",
+                "value": "盛邦",
+                "children": null
+            },
+            {
+                "name": "任子行",
+                "value": "任子行",
+                "children": null
+            },
+            {
+                "name": "天存",
+                "value": "天存",
+                "children": null
+            },
+            {
+                "name": "恒生软件",
+                "value": "恒生软件",
+                "children": null
+            },
+            {
+                "name": "趋势",
+                "value": "trend",
+                "children": null
+            },
+            {
+                "name": "鼎普",
+                "value": "鼎普",
+                "children": null
+            },
+            {
+                "name": "安移通",
+                "value": "Aruba",
+                "children": null
+            },
+            {
+                "name": "金睛云华",
+                "value": "geyecloud",
+                "children": null
+            },
+            {
+                "name": "McAfee",
+                "value": "mcafee",
+                "children": null
+            },
+            {
+                "name": "熊猫",
+                "value": "panda",
+                "children": null
+            },
+            {
+                "name": "非凡士智能科技",
+                "value": "非凡士智能科技",
+                "children": null
+            },
+            {
+                "name": "sonicwall",
+                "value": "sonicwall",
+                "children": null
+            },
+            {
+                "name": "长亭科技",
+                "value": "chaitin",
+                "children": null
+            },
+            {
+                "name": "赛门铁克",
+                "value": "symantec",
+                "children": null
+            },
+            {
+                "name": "卫士通",
+                "value": "westone",
+                "children": null
+            },
+            {
+                "name": "绿盟",
+                "value": "nsfocus",
+                "children": null
+            },
+            {
+                "name": "亚信科技",
+                "value": "Asiainfo",
+                "children": null
+            },
+            {
+                "name": "F5",
+                "value": "f5",
+                "children": null
+            },
+            {
+                "name": "交大捷普",
+                "value": "交大捷普",
+                "children": null
+            },
+            {
+                "name": "山石",
+                "value": "hillstone",
+                "children": null
+            },
+            {
+                "name": "亿赛通",
+                "value": "亿赛通",
+                "children": null
+            },
+            {
+                "name": "宏杉",
+                "value": "宏杉",
+                "children": null
+            },
+            {
+                "name": "BlueCoat",
+                "value": "BlueCoat",
+                "children": null
+            },
+            {
+                "name": "蔷薇灵动",
+                "value": "蔷薇灵动",
+                "children": null
+            },
+            {
+                "name": "火绒",
+                "value": "huorong",
+                "children": null
+            },
+            {
+                "name": "安天科技",
+                "value": "antiy",
+                "children": null
+            },
+            {
+                "name": "榕基",
+                "value": "rongji",
+                "children": null
+            },
+            {
+                "name": "网御神州",
+                "value": "网御神州",
+                "children": null
+            },
+            {
+                "name": "宇泰",
+                "value": "ut",
+                "children": null
+            },
+            {
+                "name": "四叶草",
+                "value": "seclover",
+                "children": null
+            },
+            {
+                "name": "方正",
+                "value": "founder",
+                "children": null
+            },
+            {
+                "name": "安宁",
+                "value": "安宁",
+                "children": null
+            },
+            {
+                "name": "RedHat",
+                "value": "rh",
+                "children": null
+            },
+            {
+                "name": "Jboss",
+                "value": "Jboss",
+                "children": null
+            },
+            {
+                "name": "东土科技",
+                "value": "SICOM",
+                "children": null
+            },
+            {
+                "name": "锐捷",
+                "value": "ruijie",
+                "children": null
+            },
+            {
+                "name": "迪普",
+                "value": "dptech",
+                "children": null
+            },
+            {
+                "name": "铱讯",
+                "value": "铱讯",
+                "children": null
+            },
+            {
+                "name": "Array",
+                "value": "Array",
+                "children": null
+            },
+            {
+                "name": "神软",
+                "value": "神软",
+                "children": null
+            },
+            {
+                "name": "思科",
+                "value": "cisco",
+                "children": null
+            },
+            {
+                "name": "西门子",
+                "value": "Siemens",
+                "children": null
+            },
+            {
+                "name": "卫达",
+                "value": "卫达",
+                "children": null
+            },
+            {
+                "name": "博达",
+                "value": "boda",
+                "children": null
+            },
+            {
+                "name": "moxa",
+                "value": "moxa",
+                "children": null
+            },
+            {
+                "name": "神州数码",
+                "value": "digitalchina",
+                "children": null
+            },
+            {
+                "name": "飞塔",
+                "value": "fortinet",
+                "children": null
+            },
+            {
+                "name": "Linux",
+                "value": "Linux",
+                "children": null
+            },
+            {
+                "name": "阿尔卡特",
+                "value": "Alcatel",
+                "children": null
+            },
+            {
+                "name": "奇安信网神",
+                "value": "legendsec",
+                "children": null
+            },
+            {
+                "name": "锐云通",
+                "value": "锐云通",
+                "children": null
+            },
+            {
+                "name": "科能腾达",
+                "value": "cngate",
+                "children": null
+            },
+            {
+                "name": "梭子鱼",
+                "value": "梭子鱼",
+                "children": null
+            },
+            {
+                "name": "捷普",
+                "value": "捷普",
+                "children": null
+            },
+            {
+                "name": "安博通",
+                "value": "安博通",
+                "children": null
+            },
+            {
+                "name": "达梦",
+                "value": "达梦",
+                "children": null
+            },
+            {
+                "name": "安恒",
+                "value": "001",
+                "children": null
+            },
+            {
+                "name": "齐治",
+                "value": "qizhi",
+                "children": null
+            },
+            {
+                "name": "冠群金辰",
+                "value": "kill",
+                "children": null
+            },
+            {
+                "name": "威努特",
+                "value": "winicssec",
+                "children": null
+            },
+            {
+                "name": "神州网云",
+                "value": "secsky",
+                "children": null
+            },
+            {
+                "name": "Oracle",
+                "value": "oracle",
+                "children": null
+            },
+            {
+                "name": "安态科技",
+                "value": "antell",
+                "children": null
+            },
+            {
+                "name": "中兴",
+                "value": "zte",
+                "children": null
+            },
+            {
+                "name": "北京惠而特科技有限公司",
+                "value": "北京惠而特科技有限公司",
+                "children": null
+            },
+            {
+                "name": "360",
+                "value": "360_1",
+                "children": null
+            },
+            {
+                "name": "中宇万通",
+                "value": "trustmore",
+                "children": null
+            },
+            {
+                "name": "Vmware",
+                "value": "vmware",
+                "children": null
+            },
+            {
+                "name": "Juniper",
+                "value": "juniper",
+                "children": null
+            },
+            {
+                "name": "天津麒麟",
+                "value": "kylinos",
+                "children": null
+            },
+            {
+                "name": "中科网威",
+                "value": "中科网威",
+                "children": null
+            },
+            {
+                "name": "深信服",
+                "value": "sangfor",
+                "children": null
+            },
+            {
+                "name": "Informix",
+                "value": "Informix",
+                "children": null
+            },
+            {
+                "name": "新华三",
+                "value": "h3c",
+                "children": null
+            },
+            {
+                "name": "北信源",
+                "value": "vrv",
+                "children": null
+            },
+            {
+                "name": "联想",
+                "value": "legend",
+                "children": null
+            },
+            {
+                "name": "天津飞腾",
+                "value": "phytium",
+                "children": null
+            },
+            {
+                "name": "智恒联盟",
+                "value": "智恒联盟",
+                "children": null
+            },
+            {
+                "name": "微步",
+                "value": "微步",
+                "children": null
+            },
+            {
+                "name": "360网神",
+                "value": "360网神",
+                "children": null
+            },
+            {
+                "name": "和利时",
+                "value": "和利时",
+                "children": null
+            }
+        ],
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 57,
+        "name": "产品名称",
+        "value": "cproduct",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 58,
+        "name": "范化名称",
+        "value": "csanalyse",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 110,
+        "name": "应用名称",
+        "value": "cappname",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 111,
+        "name": "攻击类型",
+        "value": "cattackName",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 112,
+        "name": "入接口",
+        "value": "cinifname",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 113,
+        "name": "出接口",
+        "value": "coutifname",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 114,
+        "name": "开始时间",
+        "value": "lstarttime",
+        "type": 2,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 115,
+        "name": "结束时间",
+        "value": "lstoptime",
+        "type": 2,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "LT",
+                "text": "<"
+            },
+            {
+                "value": "LE",
+                "text": "<="
+            },
+            {
+                "value": "GT",
+                "text": ">"
+            },
+            {
+                "value": "GE",
+                "text": ">="
+            },
+            {
+                "value": "Between",
+                "text": "在两者之间"
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 116,
+        "name": "资源名称",
+        "value": "cresourcename",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 117,
+        "name": "原始事件分类",
+        "value": "corieventtype",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 118,
+        "name": "设备接口",
+        "value": "cdevifname",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 119,
+        "name": "产品版本",
+        "value": "cproductver",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 120,
+        "name": "HTTP状态码",
+        "value": "chttpcode",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    },
+    {
+        "id": 121,
+        "name": "URL",
+        "value": "curl",
+        "type": 1,
+        "oprsList": [
+            {
+                "value": "EQ",
+                "text": "="
+            },
+            {
+                "value": "NE",
+                "text": "!="
+            },
+            {
+                "value": "In",
+                "text": "属于"
+            },
+            {
+                "value": "Contains",
+                "text": "包含"
+            },
+            {
+                "value": "Startswith",
+                "text": "开始于"
+            },
+            {
+                "value": "Isnull",
+                "text": "是否为空"
+            }
+        ],
+        "valueList": null,
+        "mappingList": null,
+        "dateFormatList": null
+    }
+]

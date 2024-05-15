@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 一行升级</title>
+    <style>
+        .margin{
+            margin-top: 30px;
+        }
+        a{
+            /* 制文本基线和下划线之间的距离 */
+            text-underline-offset: 0.25em;
+            /* 下划线颜色 */
+            text-decoration-color:aqua;
+            /* 下划线粗细 */
+            text-decoration-thickness:3px;
+        }
+        .outline-offset {
+            outline: 2px dashed blue;
+            outline-offset: var(--outline-offset, 0.5em);
+        }
+        :root {
+            accent-color: mediumvioletred;
+        }
+    </style>
+</head>
+<body>
+    <a class="margin" href="">123123</a>
+    <div class="outline-offset margin">轮廓不占据盒子的物理空间，不会撑大元素</div>
+    <input type="radio" class="margin">
+</body>
+</html>

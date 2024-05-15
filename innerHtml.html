@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="sp"></span>
+    <script>
+      var str = `<30>skyeye_email serial_num=\"105e629d699fc6ead78e905b54f949211d545d21\" proto=\"smtp\" access_time=\"2020-07-15 20:15:30.561\" sip=\"4.4.4.23\" dip=\"4.4.4.22\"  sport=\"58025\" dport=\"25\" mid=\"<2018120900204768386329@1.com>\" time=\"Sun, 9 Dec\r\n2018 00:20:47 +0800\" mail_from=\"pc2.test <111@1.com>\" to=\"111 <111@1.com>,\r\n<009>222 <222@1.com>\" cc=\"333 <333@1.com>, <009>444 <444@1.com>\" subject=\"11223344\" plain=\"11223344 111@1.com \" attachment\r\nattach_md5=\"5ed9d3341034c227b46a2b393b1b70bd\" mime_type=\"application/octetstream\" name=\"Hash.exe\" attachment\r\nattach_md5=\"a4a9133fd192911c6aeee87188aff980\" mime_type=\"application/octetstream\" name=\"1.txt\" bcc=\"555@1.com,666@1.com\" received=\"\" vendor_id=\"NDS_2\"  sess_id=\"0x5F0EF362045CED05\" src_mac=\"00:11:11:22:22:12\"  dst_mac=\"00:11:11:22:22:14\"`;
+      document.getElementById("sp").innerText = str;
+      const channel = new BroadcastChannel("yto-message");
+      channel.addEventListener("message", (ev) => {
+        console.log(ev)
+        // do something
+      });
+var jsonString = JSON.stringify(obj);
+let undefined = 'xushijie'
+let str = undefined
+console.log(str)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #e0e4cc;
+}
+
+img {
+  --s: 200px; /* image 大小*/
+  --b: 6px; /* border 像素*/
+  --c: #ae3ec9; /* border 颜色 */
+  --cb: #e9ecef; /* 背景色 */
+  --f: 1; /* 初始缩放 */
+  --_g: 50%/calc(100%/var(--f)) 100% no-repeat content-box;
+  --_o: calc((1/var(--f) - 1)*var(--s)/2 - var(--b));
+  width: var(--s);
+  padding-top: calc(var(--s)/5);
+  cursor: pointer;
+  border-radius: 0 0 999px 999px;
+
+  outline: var(--b) solid red;
+  outline-offset: var(--_o);
+  background: 
+    radial-gradient(
+      circle closest-side,
+      var(--cb) calc(99% - var(--b)),var(--c) calc(100% - var(--b)) 99%,#0000
+     ) var(--_g);
+  mask:
+    linear-gradient(#000 0 0) no-repeat
+     50% calc(1px - var(--_o)) / calc(100%/var(--f) - 2*var(--b) - 2px) 50%,
+    radial-gradient(circle closest-side,#000 99%,#0000) var(--_g);
+  transform: scale(var(--f));
+  transition: .5s;
+}
+img:hover {
+  --f: 1.4; 
+}
+    </style>
+</head>
+<body>
+    <img src="https://png.pngtree.com/png-clipart/20220404/original/pngtree-d-rendering-male-character-profile-or-avatar-happy-young-man-with-png-image_7512919.png" alt="This is a image">
+</body>
+</html>
