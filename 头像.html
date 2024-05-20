@@ -49,4 +49,26 @@ img:hover {
 <body>
     <img src="https://png.pngtree.com/png-clipart/20220404/original/pngtree-d-rendering-male-character-profile-or-avatar-happy-young-man-with-png-image_7512919.png" alt="This is a image">
 </body>
+<script>
+     let request = indexedDB.open('myDatabase', 1);
+   request.onsuccess = function(event) {
+     let db = event.target.result;
+     // 使用数据库
+   };
+   request.onerror = function(event) {
+     console.error('Error opening database:', event.target.errorCode);
+   };
+   request.onupgradeneeded = function(event) {
+     let db = event.target.result;
+     let objectStore = db.createObjectStore('myObjectStore', { keyPath: 'id' });
+     // keyPath 指定哪个属性作为键，这里假设每个对象都有一个 'id' 属性
+   };
+   let transaction = db.transaction(['myObjectStore'], 'readwrite');
+   let store = transaction.objectStore('myObjectStore');
+   let data = { id: 1, name: 'John Doe', age: 30 };
+   request = store.put(data);
+   request.onsuccess = function(event) {
+     console.log('Data inserted successfully!');
+   };
+</script>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字特效</title>
+    <style>
+      .text {
+        font-size: 32px;
+        font-weight: bold;
+        width: fit-content;
+        background-image: linear-gradient(
+          to right,
+          #7f00ff,
+          #ff7f00,
+          #32cd32,
+          #ff1493
+        );
+        color: transparent;
+        background-clip: text;
+        /*动画效果*/
+        background-size: 300% 100%;
+        animation: gradientAnimation 2s linear infinite;
+        animation-direction: alternate;
+      }
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0;
+        }
+        to {
+          background-position: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="text">谁对时间越吝啬，时间就对谁越慷慨。</p>
+  </body>
+</html>
