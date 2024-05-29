@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="outer">1111111111111
+      <div class="inner">2222222222</div>
+    </div>
+    <script>
+          var outer =document.querySelector('.outer');
+          var inner = document.querySelector('.inner');
+          new MutationObserver(function(){
+          console.log("mutate")
+          }).observe(outer,{
+              attributes: true
+          })
+          function onclick(){
+              console.log('click');
+              setTimeout(function(){
+              console.log('timeout');
+              },0);
+          Promise.resolve().then(function(){
+              console.log('promise')
+          });
+          outer.setAttribute('data-random', Math.random())
+        }
+          inner.addEventListener('click', onclick);// result-->click promise mutate click promise mutate timeout timeououter,addEventListener('click',onclick);/
+          outer.addEventListener('click', onclick);
+          inner.click()
+    </script>
+  </body>
+</html>

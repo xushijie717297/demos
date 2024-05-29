@@ -36,4 +36,28 @@
   <body>
     <p class="text">谁对时间越吝啬，时间就对谁越慷慨。</p>
   </body>
+  <script>
+    var s = new URLSearchParams('?q=js')
+    console.log('%c XSJ-[ s ]-41', 'font-size:13px; background:pink; color:#bf2c9f;', s)
+// 获取某个key值
+s.get('q')
+console.log([...s.values()])
+
+const data = [
+    {
+        "name": "DM-本地文件-20240312_165015-20240522100740599.zip",
+        "url": "http://192.168.101.20:9000/oad/imagebucket/DM-本地文件-20240312_165015-20240522100740599.zip",
+        "size": 444,
+        "videoDuration": null
+    },
+    {
+        "name": "DM-本地文件-20240312_165015-20240522100740599.zip",
+        "url": "http://192.168.101.20:9000/oad/imagebucket/DM-本地文件-20240312_165015-20240522100740599.zip",
+        "size": 444,
+        "videoDuration": null
+    }
+]
+const urlList = data.map((item) => item.url)
+console.log('%c XSJ-[ urlList ]-61', 'font-size:13px; background:pink; color:#bf2c9f;', urlList.join(','))
+  </script>
 </html>
