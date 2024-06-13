@@ -37,7 +37,27 @@
 </head>
 <body>
     <div class="text-box">
-        四周有边框的文字
+        四周vscode-file://vscode-app/d:/vscode/Microsoft%20VS%20Code/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html有边框的文字
       </div>
+<script>
+  function parseCookies(cookiesString) {
+      if (!cookiesString) {
+          return {};
+      }
+
+      return cookiesString.split(';').reduce((cookiesObj, cookie) => {
+
+          console.log('%c XSJ-[  ]-50', 'font-size:13px; background:pink; color:#bf2c9f;', cookie.trim().split('='))
+          const [name, value] = cookie.trim().split('=');
+          cookiesObj[name] = decodeURIComponent(value);
+          return cookiesObj;
+      }, {});
+  }
+
+  // 使用示例
+  const cookiesStr = "key1=value1; key2=value2; key3=value3";
+  const parsedCookies = parseCookies(cookiesStr);
+  console.log(parsedCookies);
+</script>
 </body>
 </html>

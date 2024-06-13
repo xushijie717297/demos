@@ -30,6 +30,19 @@
           inner.addEventListener('click', onclick);// result-->click promise mutate click promise mutate timeout timeououter,addEventListener('click',onclick);/
           outer.addEventListener('click', onclick);
           inner.click()
+          const arr = [{a: 2}, {a: 3}, {a: 5}, {a: 7}];
+          const result = arr.map(obj => obj.a).filter((item)=>item !==3).reduce((acc, curr) => acc + curr, '');
+          console.log('%c XSJ-[ result ]-36', 'font-size:13px; background:pink; color:#bf2c9f;', result)
+          const people = [
+              { area: "GZ", name: "YZW", age: 27 },
+              { area: "SZ", name: "TYJ", age: 25 }
+          ];
+          const map = people.reduce((t, v) => {
+              const { name, ...rest } = v;
+              t[name] = rest;
+              return t;
+          }, {}); // { YZW: {…}, TYJ: {…} }
+          console.log('%c XSJ-[  ]-46', 'font-size:13px; background:pink; color:#bf2c9f;', map)
     </script>
   </body>
 </html>
