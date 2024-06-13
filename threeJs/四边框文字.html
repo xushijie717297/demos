@@ -6,39 +6,39 @@
     <title>文字四边框</title>
     <style>
         .text-box {
-  position: relative;
-  display: inline-block; /* 需要让元素成为块级元素或行内块级元素 */
-  background-color: #fff; /* 文字背景色，也可以设置为透明 */
-  padding: 0.2em; /* 给文字一些内部间距 */
-  line-height: 1.2; /* 保持行高与边框的匹配 */
-}
+          position: relative;
+          display: inline-block; /* 需要让元素成为块级元素或行内块级元素 */
+          background-color: #fff; /* 文字背景色，也可以设置为透明 */
+          padding: 0.2em; /* 给文字一些内部间距 */
+          line-height: 1.2; /* 保持行高与边框的匹配 */
+        }
 
-.text-box::before,
-.text-box::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  border: 1px solid rgb(51, 102, 255); /* 边框颜色和宽度 */
-}
+        .text-box::before,
+        .text-box::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          border: 1px solid rgb(51, 102, 255); /* 边框颜色和宽度 */
+        }
 
-.text-box::before {
-  left: -1px;
-  right: -1px;
-}
+        .text-box::before {
+          left: -1px;
+          right: -1px;
+        }
 
-.text-box::after {
-  left: 0;
-  right: 0;
-  z-index: -1; /* 确保伪元素位于文字下方 */
-}
+        .text-box::after {
+          left: 0;
+          right: 0;
+          z-index: -1; /* 确保伪元素位于文字下方 */
+        }
     </style>
 </head>
 <body>
     <div class="text-box">
         四周vscode-file://vscode-app/d:/vscode/Microsoft%20VS%20Code/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html有边框的文字
-      </div>
+    </div>
 <script>
   function parseCookies(cookiesString) {
       if (!cookiesString) {
