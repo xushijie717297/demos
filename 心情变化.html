@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+  padding: 0;
+  margin: 0;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+	transition: 0.5s;
+}
+#app{
+  height: 100vh;
+  width: 100vw;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrap-text {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 1em;
+	font-size: 2em;
+	color: #333;
+}
+.wrap {
+	display: inline-block;
+	vertical-align: middle;
+	background: #ddd;
+	height: 10em;
+	width: 24em;
+	border-radius: 10em;
+	padding: 1em;
+	cursor: pointer;
+}
+.wrap.funny {
+  background: #FFA500;
+}
+.toggle {
+	overflow: hidden;
+	background: #fff;
+	height: 8em;
+	width: 8em;
+	border-radius: 100%;
+	position: relative;
+}
+.toggle::before,
+.toggle::after {
+  position: absolute;
+  content: '';
+  top: 25%;
+  height: 1em;
+  width: 1em;
+  background: #ddd;
+  border-radius: 100%;
+}
+.active .toggle::before,
+.active .toggle::after {
+  animation: slidetoboring 0.4s linear;
+}
+.toggle::before {
+  left: 25%;
+}
+.toggle::after {
+  right: 25%;
+}
+.funny .toggle {
+  margin-left: 14em;
+}
+.funny .toggle::before,
+.funny .toggle::after {
+  background: #FFA500;
+  animation: slidetofunny 0.4s linear;
+}
+.mouth {
+	position: absolute;
+	top: 60%;
+	left: 1.5em;
+	right: 1.5em;
+	height: 0.5em;
+	background: #ddd;
+	border-radius: 1em;
+}
+.active .mouth {
+  animation: slidetoboring 0.4s linear;
+}
+.funny .mouth {
+  height: 2.5em;
+  border-radius: 1em 1em 10em 10em;
+  background: #FFA500;
+  animation: slidetofunny 0.4s;
+  top: 55%;
+}
+@keyframes slidetofunny {
+	0% { transform: translateX(0%); }
+	50% { transform: translateX(100%); }
+	51% { transform: translateX(-100%); }
+	100% { transform: translateX(0%); }
+}
+@keyframes slidetoboring {
+	0% { transform: translateX(0%); }
+	50% { transform: translateX(-100%); }
+	51% { transform: translateX(100%); }
+	100% { transform: translateX(0%); }
+}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <span class="wrap-text">工作日</span>
+        <div class="wrap">
+          <div class="toggle">
+            <span class="mouth"></span>
+          </div>
+        </div>
+        <span class="wrap-text">周末</span>
+      </div>
+</body>
+<script>
+function toggleClass (dom, className) {
+  if ((' ' + dom.className + ' ').indexOf(' ' + className + ' ') > -1) {
+    dom.classList.remove(className);
+  } else {
+    dom.classList.add(className);
+  }
+}
+document.querySelector('.wrap').addEventListener('click', function () {
+  this.classList.add('active');
+  toggleClass(this, 'funny')
+})
+</script>
+</html>

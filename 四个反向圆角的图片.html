@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .rect0 {
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+  background: radial-gradient(
+    circle at center,
+    transparent 0,
+    transparent 20px,
+    #ddd 20px
+  );
+}
+
+.rect1 {
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+  background: radial-gradient(
+    circle at left top,
+    transparent 0,
+    transparent 20px,
+    #ddd 20px
+  );
+}
+
+.rect2 {
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+  background: radial-gradient(
+        circle at left top,
+        transparent 0,
+        transparent 20px,
+        red 20px
+      )
+      left top,
+    radial-gradient(
+        circle at right top,
+        transparent 0,
+        transparent 20px,
+        green 20px
+      )
+      right top,
+    radial-gradient(
+        circle at left bottom,
+        transparent 0,
+        transparent 20px,
+        blue 20px
+      )
+      left bottom,
+    radial-gradient(
+        circle at right bottom,
+        transparent 0,
+        transparent 20px,
+        yellow 20px
+      )
+      right bottom;
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+}
+
+.rect3 {
+  width: 200px;
+  height: 150px;
+  margin: 20px;
+  background: url("https://www.jiangweishan.com/tool/clippy/pics/pittsburgh.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  mask: radial-gradient(
+        circle at left top,
+        transparent 0,
+        transparent 20px,
+        #ddd 20px
+      )
+      left top,
+    radial-gradient(
+        circle at right top,
+        transparent 0,
+        transparent 20px,
+        red 20px
+      )
+      right top,
+    radial-gradient(
+        circle at left bottom,
+        transparent 0,
+        transparent 20px,
+        red 20px
+      )
+      left bottom,
+    radial-gradient(
+        circle at right bottom,
+        transparent 0,
+        transparent 20px,
+        red 20px
+      )
+      right bottom;
+  -webkit-mask: radial-gradient(
+        circle at left top,
+        transparent 0,
+        transparent 20px,
+        red 20px
+      )
+      left top,
+    radial-gradient(
+        circle at right top,
+        transparent 0,
+        transparent 20px,
+        red 20px
+      )
+      right top,
+    radial-gradient(
+        circle at left bottom,
+        transparent 0,
+        transparent 20px,
+        red 20px
+      )
+      left bottom,
+    radial-gradient(
+        circle at right bottom,
+        transparent 0,
+        transparent 20px,
+        red 20px
+      )
+      right bottom;
+  mask-size: 50% 50%;
+  -webkit-mask-size: 50% 50%;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+}
+
+    </style>
+</head>
+<body>
+    <!-- 最终结果 -->
+<div class="rect3"></div>
+
+<!-- 矩形中央画圆 -->
+<div class="rect0"></div>
+
+<!-- 矩形左上角画圆 -->
+<div class="rect1"></div>
+
+<!-- 矩形四个角画圆 -->
+<div class="rect2"></div>
+</body>
+</html>

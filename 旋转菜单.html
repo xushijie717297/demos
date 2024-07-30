@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body,ul,li,input,div{padding:0;margin:0;}      
+        body{overflow: hidden;}  
+        i{font-style: normal;}
+        .mvcenter{position: absolute;bottom:20px;right:20px;}
+        .menu-btn.mvcenter{margin-top: -20px;margin-left:-20px;}
+        .menu-btn{width:40px;height:40px;cursor: pointer;background-color: red;border-radius: 20px;display: block;z-index: 99;opacity: 0;}
+        .menu-btn + label{display: block;transition: transform 0.5s, top 0.5s;position: absolute;bottom: 0;right: 0;margin: auto;z-index:99;cursor:pointer;}        
+        .menu-btn + label i{color:#fff; font-size:40px;position: absolute;bottom:5px;right:0;z-index: 12;}
+        .menu-btn + label i.icon-caidan,.menu-btn:checked + label i.icon-quxiaoguanbi1{opacity: 1;}
+        .menu-btn + label i.icon-quxiaoguanbi1,.menu-btn:checked + label i.icon-caidan{opacity: 0;}
+        .menu-btn:checked + label + .menu-list::after{opacity: 1;}
+        .menu-btn + label::after{content:"";width:240px;height:240px;background-color:#8a2be1;position: absolute;bottom:-120px;right:-120px;border-radius: 50%;z-index: 9;}
+
+        .menu-list::after{content:"";width:560px;height:560px;background-color: #ebddf8;position: absolute;bottom:-280px;right:-280px;border-radius: 50%;z-index: 9;opacity: 0;transition: opacity .5s;}
+        .menu-list > li.mvcenter{margin-top: -40px;margin-left:-40px;}
+        .menu-list > li{width:70px;height:70px;border-radius:80px;border:3px solid #b880eb;color:#8a2be1;display: flex;align-items: center;justify-content: center; opacity: 0;transition: all .5s;transform-origin: center center;z-index: 12;}
+        .menu-list > li:nth-child(1){transform:rotate(0)}
+        .menu-list > li:nth-child(2){transform:rotate(-45deg)}
+        .menu-list > li:nth-child(3){transform:rotate(-90deg)}
+
+        .menu-list > li a{font-size:30px;font-weight: bold;}
+        .menu-list > li:nth-child(1) a{transform:rotate(10deg)}
+        .menu-list > li:nth-child(2) a{transform:rotate(-45deg)}
+        .menu-list > li:nth-child(3) a{transform:rotate(-90deg)}
+
+        .menu-btn:checked ~ ul .menu-item {opacity: 1;}
+        .menu-btn:checked ~ ul .menu-item:nth-child(1) {transform: rotate(0) translateX(-120px);}
+        .menu-btn:checked ~ ul .menu-item:nth-child(2) {transform: rotate(45deg) translateX(-120px);}
+        .menu-btn:checked ~ ul .menu-item:nth-child(3) {transform: rotate(90deg) translateX(-120px);}
+    </style>
+</head>
+<body>
+    <div class="menu mvcenter">
+        <input checked="checked" class="menu-btn mvcenter" id="menubtn" type="checkbox">
+        <label for="menubtn">
+            <i class="iconfont icon-caidan">开</i>
+            <i class="iconfont icon-quxiaoguanbi1">收</i>
+        </label>
+        <ul class="menu-list">
+          <li class="mvcenter menu-item"><a class="iconfont icon-lianxi">你</a></li>
+          <li class="mvcenter menu-item"><a class="iconfont icon-dizhi">好</a></li>
+          <li class="mvcenter menu-item"><a class="iconfont icon-fankui">啊</a></li>
+          <li class="mvcenter menu-item"><a class="iconfont icon-fankui">啊</a></li>
+        </ul>
+    </div>
+</body>
+</html>
